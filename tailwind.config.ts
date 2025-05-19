@@ -17,9 +17,16 @@ const config: Config = {
         exo: ["var(--font-exo)"],
         robotoMono: ["var(--font-roboto-mono)"],
       },
-      colors: {},
+      colors: {
+        accent: "#63D706",
+        error: "#FF2B27",
+        text: "#cfcfcf",
+        title: "#F8F8F8",
+      },
       dropShadow: {},
-      backgroundImage: {},
+      backgroundImage: {
+        "radial-green": "radial-gradient(ellipse, transparent, #13D12F )",
+      },
     },
   },
   plugins: [forms],

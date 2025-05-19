@@ -4,7 +4,7 @@
 
 :root {
   --background: #141414;
-  --foreground: #f8f8f2;
+  --text: #f8f8f8;
 }
 :root:has(.no-doc-scroll) {
   overflow: hidden;
@@ -13,7 +13,7 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text);
   font-family: var(--font-roboto-mono), monospace;
 }
 a {
