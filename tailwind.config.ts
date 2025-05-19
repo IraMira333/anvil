@@ -12,6 +12,80 @@ const config: Config = {
       tab: "768px",
       pc: "1440px",
     },
+    fontSize: {
+      xs: [
+        "12px",
+        {
+          lineHeight: "12px",
+        },
+      ],
+      sm1: [
+        "14px",
+        {
+          lineHeight: "14px",
+        },
+      ],
+      sm11: [
+        "14px",
+        {
+          lineHeight: "15px",
+        },
+      ],
+      sm12: [
+        "14px",
+        {
+          lineHeight: "17px",
+        },
+      ],
+      sm13: [
+        "14px",
+        {
+          lineHeight: "18px",
+        },
+      ],
+      base: [
+        "16px",
+        {
+          lineHeight: "16px",
+        },
+      ],
+      base12: [
+        "16px",
+        {
+          lineHeight: "19px",
+        },
+      ],
+      base13: [
+        "16px",
+        {
+          lineHeight: "21px",
+        },
+      ],
+      lg: [
+        "18px",
+        {
+          lineHeight: "18px",
+        },
+      ],
+      lg11: [
+        "18px",
+        {
+          lineHeight: "20px",
+        },
+      ],
+      lg12: [
+        "18px",
+        {
+          lineHeight: "22px",
+        },
+      ],
+      lg13: [
+        "18px",
+        {
+          lineHeight: "23px",
+        },
+      ],
+    },
     extend: {
       fontFamily: {
         exo: ["var(--font-exo)"],
