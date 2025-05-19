@@ -19,9 +19,12 @@ export default function LanguageSwitcher() {
   }, [pathName, searchParams]);
 
   return (
-    <ul className="flex gap-2 tab:gap-3 tab:text-base pc:text-lg ml-5">
+    <ul className="flex gap-1 uppercase text-base tab:text-sm1 leading-3 pc:text-base tab:leading-[10px] pc:leading-3 ml-5 pb-1">
       {locales.map(curLocale => (
-        <li key={curLocale}>
+        <li
+          key={curLocale}
+          className="relative first:after:content-[''] first:after:absolute first:after:top-0 first:after:right-0 first:after:w-px first:after:h-[calc(100%+2px)] first:after:bg-current first:pr-[5px]"
+        >
           <Link
             href={{
               hash: hash,
@@ -33,8 +36,8 @@ export default function LanguageSwitcher() {
             scroll={false}
             className={
               curLocale === locale
-                ? "text-white hover:text-green-400  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
-                : "text-green-400 hover:text-green-400  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+                ? "text-accent hover:text-accent  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+                : "text-text hover:text-accent  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
             }
           >
             {curLocale}
