@@ -27,7 +27,7 @@ export const MobileMenu = ({
           alt="background image svg - target"
           width={252}
           height={253}
-          className="absolute top-[69px] left-1/2 -translate-x-1/2"
+          className="absolute z-[-1] top-[69px] left-1/2 -translate-x-1/2"
         />
         <Menu
           onClick={() => setIsHeaderMenuOpened(false)}
