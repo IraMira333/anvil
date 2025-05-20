@@ -5,6 +5,7 @@ import { Exo_2, Roboto_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 
+import { Header } from "@/components/Header/Header";
 import { routing } from "@/i18n/routing";
 
 const exo = Exo_2({
@@ -43,7 +44,7 @@ export default async function RootLayout({
         className={`${exo.variable} ${robotoMono.variable} antialiased overflow-x-visible`}
       >
         <NextIntlClientProvider>
-          <header></header>
+          <Header />
           <main>{children}</main>
           <footer></footer>
         </NextIntlClientProvider>
