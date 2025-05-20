@@ -96,6 +96,8 @@ const config: Config = {
         error: "#FF2B27",
         text: "#cfcfcf",
         title: "#F8F8F8",
+        title20: "#F8F8F833",
+        blackCustom: "#141414",
       },
       dropShadow: {},
       backgroundImage: {
