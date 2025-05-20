@@ -1,9 +1,10 @@
 {
   "HomePage": {
-    "title": "UAV production by veterans for the defense of the country",
+    "title": "UAV production <br></br>by veterans <br></br>for the defense of the country",
     "descriptionItem1": "Production of FPV drones / UAV aircraft",
     "descriptionItem2": "Supply of components",
     "descriptionItem3": "Engineering / consulting services",
+    "about": "Про нас",
     "aboutTitle": "ANVIL — a veteran community that continues to contribute to national defense",
     "aboutDescription": "We create advanced solutions in unmanned technology based on real combat experience.",
     "ourValuesTitle": "Our values",
