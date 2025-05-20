@@ -85,6 +85,37 @@ const config: Config = {
           lineHeight: "23px",
         },
       ],
+      xl: ["20px", { lineHeight: "24px" }],
+      "2xl": [
+        "24px",
+        {
+          lineHeight: "24px",
+        },
+      ],
+      "3xl": [
+        "28px",
+        {
+          lineHeight: "28px",
+        },
+      ],
+      "4xl": [
+        "36px",
+        {
+          lineHeight: "36px",
+        },
+      ],
+      "4xl12": [
+        "36px",
+        {
+          lineHeight: "43px",
+        },
+      ],
+      "5xl": [
+        "48px",
+        {
+          lineHeight: "48px",
+        },
+      ],
     },
     extend: {
       fontFamily: {
