@@ -19,11 +19,11 @@ export const MobileMenu = ({
       initial={{ height: 0 }}
       animate={{ height: isHeaderMenuOpened ? "100vh" : 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
-      className="tab:hidden absolute top-0 left-0 z-[2] w-[100vw] px-4 pc:px-8 overflow-hidden bg-blackCustom "
+      className="tab:hidden absolute top-0 left-0 z-[5] w-[100vw] px-4 pc:px-8 overflow-hidden bg-blackCustom "
     >
       <div className="relative flex flex-col justify-between h-full pt-[65px] pb-[100px]">
         <Image
-          src="/icons/target.svg"
+          src="/bg/target.svg"
           alt="background image svg - target"
           width={252}
           height={253}
