@@ -99,7 +99,8 @@ const config: Config = {
       },
       dropShadow: {},
       backgroundImage: {
-        "radial-green": "radial-gradient(ellipse, transparent, #13D12F )",
+        "radial-green-100": "radial-gradient(ellipse, transparent, #13D12F )",
+        "radial-green-50": "radial-gradient(ellipse,  transparent, #13D12F80)",
       },
     },
   },
