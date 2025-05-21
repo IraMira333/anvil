@@ -1,4 +1,4 @@
-import { ListStyleTypeFourSquare } from "./Icons/ListStyleTypeFourSquare";
+import { ListStyleTypeFourSquare } from "./ListStyleTypeFourSquare";
 
 export const ValueDiv = ({
   title,
