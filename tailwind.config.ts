@@ -1,5 +1,7 @@
 import forms from "@tailwindcss/forms";
 import type { Config } from "tailwindcss";
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const clipPath = require("tailwind-clip-path");
 
 const config: Config = {
   content: [
@@ -129,14 +131,25 @@ const config: Config = {
         title: "#F8F8F8",
         title20: "#F8F8F833",
         blackCustom: "#141414",
+        black30: "#303030",
+      },
+      clipPath: {
+        "hex-notch":
+          "polygon(0 45px, 16px 15px, calc(50% - 94px) 15px, calc(50% - 83px) 0, calc(50% + 83px) 0, calc(50% + 94px) 15px, calc(100% - 16px) 15px, 100% 45px, 100% 100%, 0 100%)",
+        "down-cut-mobile-service":
+          "polygon(0 0, 16px 30px, calc(50% - 94px) 30px, calc(50% - 82px) 16px, calc(50% + 82px) 16px, calc(50% + 94px) 30px, calc(100% - 16px) 30px, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 30px))",
+        "down-cut-mobile":
+          "polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 30px))",
       },
       dropShadow: {},
       backgroundImage: {
         "radial-green-100": "radial-gradient(ellipse, transparent, #13D12F )",
         "radial-green-50": "radial-gradient(ellipse,  transparent, #13D12F80)",
+        "radial-green-button":
+          "radial-gradient(circle,  transparent, #13D12F80)",
       },
     },
   },
-  plugins: [forms],
+  plugins: [forms, clipPath],
 };
 export default config;
