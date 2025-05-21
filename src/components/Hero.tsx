@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 
-import { Button } from "./Button";
-import { ListStyleTypeFourSquare } from "./Icons/ListStyleTypeFourSquare";
+import { Button } from "./shared/Button";
+import { ListStyleTypeFourSquare } from "./shared/ListStyleTypeFourSquare";
 import { Section } from "./shared/Section";
 
 export const Hero = () => {
@@ -13,13 +13,16 @@ export const Hero = () => {
   ];
 
   return (
-    <Section
-      className="pt-8 pb-[88px] relative bg-blackCustom "
-      style={{
-        clipPath:
-          "polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 30px))",
-      }}
-    >
+    <Section className="pt-8 pb-[88px] relative bg-blackCustom clip-path-down-cut-mobile ">
+      <div className="absolute inset-0 z-[-1] overflow-hidden">
+        <div
+          className="w-full h-full "
+          style={{
+            backgroundImage: "url('/bg/noise.svg')",
+            backgroundPosition: "top center",
+          }}
+        />
+      </div>
       <h1 className="uppercase font-exo font-semibold text-3xl text-title mb-4">
         {t.rich("title", {
           br: () => <br />,
