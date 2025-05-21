@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 
 import { Union } from "./Icons/Union";
 import { Section } from "./shared/Section";
-import { ValueDiv } from "./ValueDiv";
+import { ValueDiv } from "./shared/ValueDiv";
 
 export const About = () => {
   const t = useTranslations("HomePage");
@@ -14,7 +14,7 @@ export const About = () => {
   ];
 
   return (
-    <Section className="mt-[-30px] relative ">
+    <Section className="mt-[-30px] relative">
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
           className="w-full h-full bg-no-repeat  "
