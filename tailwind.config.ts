@@ -137,8 +137,7 @@ const config: Config = {
         "hex-notch":
           "polygon(0 45px, 16px 15px, calc(50% - 94px) 15px, calc(50% - 83px) 0, calc(50% + 83px) 0, calc(50% + 94px) 15px, calc(100% - 16px) 15px, 100% 45px, 100% 100%, 0 100%)",
         "hex-notch-galery":
-          "polygon(0 45px, 16px 15px, calc(50% - 93px) 15px, calc(50% - 82px) 2px, calc(50% + 82px) 2px, calc(50% + 93px) 15px, calc(100% - 16px) 15px, 100% 45px, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 30px))",
-
+          "polygon(0 45px, 16px 15px, calc(50% - 93px) 15px, calc(50% - 82px) 2px, calc(50% + 82px) 2px, calc(50% + 93px) 15px, calc(100% - 16px) 15px, 100% 45px, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, calc(50% + 92.5px) 100%, calc(50% + 82px) calc(100% - 13px), calc(50% - 81.3px) calc(100% - 13px), calc(50% - 92.5px) 100%, 16px 100%, 0 calc(100% - 30px))",
         "down-cut-mobile-service":
           "polygon(0 0, 16px 30px, calc(50% - 94px) 30px, calc(50% - 82px) 16px, calc(50% + 82px) 16px, calc(50% + 94px) 30px, calc(100% - 16px) 30px, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 30px))",
         "down-cut-mobile":

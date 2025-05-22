@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 
 import { Accordion } from "./Accordion/Accordion";
 import { Union } from "./Icons/Union";
-import { Section } from "./shared/Section";
 
 export const Services = () => {
   const t = useTranslations("HomePage");
@@ -43,7 +42,7 @@ export const Services = () => {
   ];
 
   return (
-    <Section
+    <section
       id="services"
       className="mt-[-30px] relative pb-[90px] clip-path-down-cut-mobile-service"
     >
@@ -60,7 +59,7 @@ export const Services = () => {
       <h3 className="absolute top-[21px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
         {t("services")}
       </h3>
-      <div className="pt-[78px]">
+      <div className="pt-[78px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
         <h1 className="font-exo font-semibold text-2xl text-title mb-4">
           {t("aboutTitle")}
         </h1>
@@ -76,6 +75,6 @@ export const Services = () => {
           ))}
         </ul>
       </div>
-    </Section>
+    </section>
   );
 };
