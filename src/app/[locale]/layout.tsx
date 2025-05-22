@@ -5,6 +5,7 @@ import { Exo_2, Roboto_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
 import { routing } from "@/i18n/routing";
 
@@ -46,7 +47,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <Header />
           <main>{children}</main>
-          <footer></footer>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -8,15 +8,15 @@ export const CallUsInfo = () => {
       <div className="flex flex-col gap-1 font-exo">
         <a
           href="tel:+380955076901"
-          className="text-title text-lg13 font-semibold"
+          className="text-title text-lg13 font-semibold text-center"
         >
           +380 95 507 69 01
         </a>
         <a
-          href="mailto:contact@anvil.com"
-          className="text-title text-lg13 font-semibold"
+          href="mailto:anvil_technologi@ukr.net"
+          className="text-title text-lg13 font-semibold text-center"
         >
-          contact@anvil.com
+          anvil_technologi@ukr.net
         </a>
       </div>
     </div>

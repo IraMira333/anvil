@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Union } from "./Icons/Union";
+import { VacancyForm } from "./VacancyForm";
 
 export const Vacancies = () => {
   const t = useTranslations("HomePage");
@@ -33,7 +34,7 @@ export const Vacancies = () => {
           alt={t("vacanciesListTitle")}
           width={600}
           height={600}
-          className="min-w-[288px] min-h-[288px] w-[100vw] h-auto max-w-[600px] max-h-[600px] aspect-square"
+          className="min-w-[288px] min-h-[288px] w-[100vw] h-auto max-w-[600px] max-h-[600px] aspect-square bg-[#141414] opacity-[0.45]"
         />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[288px] h-auto">
           <h2 className="font-exo text-title text-xl font-semibold uppercase indent-[80px]">
@@ -65,6 +66,7 @@ export const Vacancies = () => {
           <div className="block w-[11px] h-[18px] border border-r-0 border-accent absolute top-0 left-0" />
           <div className="block w-[11px] h-[18px] border border-l-0 border-accent absolute bottom-0 right-0" />
         </div>
+        <VacancyForm />
       </div>
     </section>
   );
