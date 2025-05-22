@@ -39,3 +39,10 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.slider-dot {
+  @apply appearance-none bg-black30 inline-flex cursor-pointer  p-0 m-0 w-2 h-2;
+}
+.slider-dot--selected {
+  @apply bg-title justify-center;
+}
