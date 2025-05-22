@@ -24,9 +24,9 @@ type ProjectWithVideo = {
   imageURL?: never;
 };
 
-type ProjectType = (ProjectWithImage | ProjectWithVideo)[];
+export type ProjectType = (ProjectWithImage | ProjectWithVideo)[];
 
-export const SliderGallery = () => {
+export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
   const options: EmblaOptionsType = {
     loop: true,
   };
@@ -49,13 +49,6 @@ export const SliderGallery = () => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
-  const projects: ProjectType = [
-    { title: "slide1", imageURL: "/images/slide11.jpg" },
-    { title: "slide2", imageURL: "/images/slide2.jpg" },
-    { title: "slide3", imageURL: "/images/slide31.jpg" },
-    { title: "slide4", imageURL: "/images/slide4.jpg" },
-  ];
-
   return (
     <div className="relative min-w-full">
       <div className=" overflow-hidden" ref={emblaRef}>
@@ -63,7 +56,7 @@ export const SliderGallery = () => {
           {projects.map(project => (
             <div
               key={project.title}
-              className="flex-[0_0_100%] tab:flex-[0_0_40%] w-full px-[5px] pc:px-2"
+              className="flex-[0_0_100%] tab:flex-[0_0_46%] w-full px-[5px] pc:px-2"
             >
               {project.imageURL ? (
                 <Image
