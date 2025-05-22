@@ -33,7 +33,7 @@ export const Menu = ({
           <li key={idx}>
             <button
               onClick={() => handleLinkClick(content.path)}
-              className={" uppercase tab:text-sm12 pc:text-base"}
+              className={" uppercase text-title tab:text-sm12 pc:text-base"}
             >
               {content.name}
             </button>
