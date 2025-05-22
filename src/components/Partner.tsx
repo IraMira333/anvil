@@ -34,7 +34,10 @@ export const Partner = () => {
   ];
 
   return (
-    <Section className="relative pt-8 pb-[60px] clip-path-hex-notch bg-blackCustom mt-[-46px] z-[2]">
+    <Section
+      id="partner"
+      className="relative pt-8 pb-[60px] clip-path-hex-notch bg-blackCustom mt-[-46px] z-[2]"
+    >
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
           className="w-full h-full "
