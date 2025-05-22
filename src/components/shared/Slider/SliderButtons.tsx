@@ -70,7 +70,7 @@ export const PrevButton: React.FC<ButtonType> = props => {
     <button
       disabled={disabled}
       aria-label="show previous slide button"
-      className="flex justify-center items-center w-10 h-10 relative bg-transparent hover:bg-radial-green-button transition-all duration-300 ease-out"
+      className="flex justify-center items-center w-10 h-10 relative bg-transparent hover:bg-radial-green-button transition-all duration-300 ease-out hover:text-accent"
       type="button"
       {...restProps}
     >
@@ -87,7 +87,7 @@ export const NextButton: React.FC<ButtonType> = props => {
     <button
       disabled={disabled}
       aria-label="show next slide button"
-      className="flex justify-center items-center w-10 h-10 relative bg-transparent hover:bg-radial-green-button transition-all duration-300 ease-out"
+      className="flex justify-center items-center w-10 h-10 relative bg-transparent hover:bg-radial-green-button transition-all duration-300 ease-out hover:text-accent"
       type="button"
       {...restProps}
     >

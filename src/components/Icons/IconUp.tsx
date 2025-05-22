@@ -11,8 +11,11 @@ export const IconUp = ({ className }: IconProps) => {
       className={className}
       aria-label="Up to top the page icon"
     >
-      <path d="M5 11L11 5.5H13L19 11V13.5L13 8H11L5 13.5V11Z" fill="#CFCFCF" />
-      <path d="M13 8H11V19H13V8Z" fill="#CFCFCF" />
+      <path
+        d="M5 11L11 5.5H13L19 11V13.5L13 8H11L5 13.5V11Z"
+        fill="currentColor"
+      />
+      <path d="M13 8H11V19H13V8Z" fill="currentColor" />
     </svg>
   );
 };

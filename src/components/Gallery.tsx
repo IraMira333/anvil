@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 
 import { Union } from "./Icons/Union";
-import { Section } from "./shared/Section";
 import { ProjectType, SliderGallery } from "./shared/SliderGallery";
 
 export const Gallery = () => {
@@ -13,7 +12,7 @@ export const Gallery = () => {
     { title: t("slide4Title"), imageURL: "/images/slide4.jpg" },
   ];
   return (
-    <Section
+    <section
       id="gallery"
       className="relative pt-[65px] pb-[105px] clip-path-hex-notch-galery mt-[-45px] z-[20] bg-blackCustom"
     >
@@ -21,10 +20,12 @@ export const Gallery = () => {
       <h3 className="absolute top-[8px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
         {t("gallery")}
       </h3>
-      <h2 className="font-exo font-semibold uppercase text-center text-3xl mb-8">
-        {t("portfolioTitle")}
-      </h2>
-      <SliderGallery projects={projects} />
-    </Section>
+      <div className="relative px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
+        <h2 className="font-exo font-semibold uppercase text-center text-3xl mb-8">
+          {t("portfolioTitle")}
+        </h2>
+        <SliderGallery projects={projects} />
+      </div>
+    </section>
   );
 };

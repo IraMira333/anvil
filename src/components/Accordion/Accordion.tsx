@@ -54,7 +54,7 @@ export function Accordion({
           {!item.full ? (
             <AccordionButton
               className={`transition-transform duration-300 ${
-                isAccordionOpen ? "rotate-180" : "rotate-0"
+                isAccordionOpen ? "rotate-0" : "rotate-180"
               }`}
             />
           ) : null}
