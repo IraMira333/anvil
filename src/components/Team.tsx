@@ -7,7 +7,10 @@ export const Team = () => {
   const t = useTranslations("HomePage");
 
   return (
-    <Section className=" relative pt-[65px] pb-[122px] font-exo text-title uppercase ">
+    <Section
+      id="team"
+      className=" relative pt-[65px] pb-[122px] font-exo text-title uppercase "
+    >
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
           className="w-full h-full bg-no-repeat  "

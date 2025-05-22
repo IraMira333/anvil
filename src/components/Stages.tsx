@@ -14,7 +14,7 @@ export const Stages = () => {
   ];
 
   return (
-    <Section className="mt-[-30px] relative pb-[105px]">
+    <Section id="stages" className="mt-[-30px] relative pb-[105px]">
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
           className="w-full h-full bg-no-repeat  "

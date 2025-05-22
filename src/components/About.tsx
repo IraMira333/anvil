@@ -14,7 +14,7 @@ export const About = () => {
   ];
 
   return (
-    <Section className="mt-[-30px] relative">
+    <Section id="about" className="mt-[-30px] relative">
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
           className="w-full h-full bg-no-repeat  "

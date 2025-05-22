@@ -43,7 +43,10 @@ export const Services = () => {
   ];
 
   return (
-    <Section className="mt-[-30px] relative pb-[90px] clip-path-down-cut-mobile-service">
+    <Section
+      id="services"
+      className="mt-[-30px] relative pb-[90px] clip-path-down-cut-mobile-service"
+    >
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
           className="w-full h-full "
