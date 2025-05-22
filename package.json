@@ -20,6 +20,9 @@
     },
     "dependencies": {
         "@tailwindcss/forms": "^0.5.10",
+        "embla-carousel": "^8.6.0",
+        "embla-carousel-auto-scroll": "^8.6.0",
+        "embla-carousel-react": "^8.6.0",
         "framer-motion": "^12.12.1",
         "next": "15.3.2",
         "next-intl": "^4.1.0",
