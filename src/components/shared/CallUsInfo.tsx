@@ -1,10 +1,14 @@
 import { useTranslations } from "next-intl";
 
-export const CallUsInfo = () => {
+export const CallUsInfo = ({ footer }: { footer?: boolean }) => {
   const t = useTranslations("Menu");
   return (
     <div className="flex flex-col items-center justify-center gap-[18px]">
-      <h3 className="text-text text-xs uppercase">{t("callUs")}</h3>
+      <h3
+        className={`${footer ? "text-title" : "text-text"} text-xs uppercase`}
+      >
+        {t("callUs")}
+      </h3>
       <div className="flex flex-col gap-1 font-exo">
         <a
           href="tel:+380955076901"

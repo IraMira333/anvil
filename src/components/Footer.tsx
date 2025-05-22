@@ -40,10 +40,10 @@ export const Footer = () => {
       </div>
       <div className="pt-[78px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
         <IconLogo className="mt-[205px] mx-auto w-[172px] h-auto mb-px" />
-        <p className="text-[8px] font-exo font-semibold leading-[10px] uppercase text-center mb-8">
+        <p className="text-[8px] text-title font-exo font-semibold leading-[10px] uppercase text-center mb-8">
           {t("slogan")}
         </p>
-        <CallUsInfo />
+        <CallUsInfo footer />
         <SocialLinks className="mt-6 mb-8" />
         <div className="flex text-xs uppercase gap-10 justify-between">
           <div className="w-1/2">
