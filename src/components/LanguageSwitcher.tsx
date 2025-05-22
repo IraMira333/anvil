@@ -37,7 +37,7 @@ export default function LanguageSwitcher() {
             className={
               curLocale === locale
                 ? "text-accent hover:text-accent  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] py-3"
-                : "text-text hover:text-accent  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] py-3"
+                : "text-title hover:text-accent  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] py-3"
             }
           >
             {curLocale}
