@@ -64,7 +64,7 @@ export const VacancyForm = () => {
   };
 
   const inputClass =
-    "mt-6 mb-7 block w-full bg-transparent border-0 pb-6 pl-[18px] font-exo placeholder:uppercase font-semibold text-title placeholder:text-title group-focus:outline-none focus:ring-0";
+    "mt-6 mb-7 block w-full bg-transparent border-0 pb-6 pl-[18px] font-exo placeholder:uppercase font-semibold text-title placeholder:text-text group-focus:outline-none focus:ring-0";
 
   return (
     <form
@@ -150,7 +150,7 @@ export const VacancyForm = () => {
                 href="https://www.ilovemyteam.online/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline"
+                className="underline font-semibold"
               >
                 {chunk}
               </a>

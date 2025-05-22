@@ -30,7 +30,7 @@ export const Hero = () => {
         </h1>
         <div className="bg-slate-500 w-full h-auto aspect-[288/170] mb-8"></div>
         <div className="flex flex-col gap-10 justify-center mx-auto max-w-[330px]">
-          <ul className="flex flex-col gap-3 font-exo ">
+          <ul className="flex flex-col gap-3 font-exo text-title ">
             {descriptionList.map((item, index) => (
               <li
                 key={index}

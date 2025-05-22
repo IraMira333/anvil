@@ -60,10 +60,9 @@ export const Services = () => {
         {t("services")}
       </h3>
       <div className="pt-[78px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <h1 className="font-exo font-semibold text-2xl text-title mb-4">
-          {t("aboutTitle")}
+        <h1 className="font-exo font-semibold text-3xl text-title uppercase mb-8">
+          {t("specializationTitle")}
         </h1>
-        <p className="text-sm13 w-[95%]">{t("aboutDescription")}</p>
         <ul className="">
           {servicesList.map((item, index) => (
             <li
