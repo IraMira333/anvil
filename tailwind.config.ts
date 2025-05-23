@@ -126,6 +126,7 @@ const config: Config = {
       },
       colors: {
         accent: "#63D706",
+        hoverAccent: "#88F035",
         error: "#FF2B27",
         text: "#cfcfcf",
         title: "#F8F8F8",
