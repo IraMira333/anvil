@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Button } from "./shared/Button";
@@ -28,7 +29,15 @@ export const Hero = () => {
             br: () => <br />,
           })}
         </h1>
-        <div className="bg-slate-500 w-full h-auto aspect-[288/170] mb-8"></div>
+        <div className=" w-full h-auto aspect-[288/170] mb-8">
+          <Image
+            src="/images/dron.png"
+            alt="fpv"
+            width={757}
+            height={447}
+            className="mx-auto"
+          />
+        </div>
         <div className="flex flex-col gap-10 justify-center mx-auto max-w-[330px]">
           <ul className="flex flex-col gap-3 font-exo text-title ">
             {descriptionList.map((item, index) => (
