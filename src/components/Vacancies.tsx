@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+import { IconArrowsDown } from "./Icons/IconArrowsDown";
 import { Union } from "./Icons/Union";
 import { VacancyForm } from "./VacancyForm";
 
@@ -45,20 +46,27 @@ export const Vacancies = () => {
         </div>
       </div>
       <div className="px-4 tab:px-5 pc:px-60 max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <p className="text-sm13 mb-6">{t("vacancyDescription")}</p>
-        <h2 className=" font-exo text-title uppercase font-semibold mb-[26px]">
-          {t("vacanciesListTitle")}
-        </h2>
-        <ul className="flex flex-col gap-4 mb-[60px]">
-          {vacanciesList.map((item, index) => (
-            <li key={index} className=" flex items-center gap-4">
-              <div>
-                <div className="w-1 h-1 bg-accent" />
-              </div>
-              <p className="text-sm11 uppercase">{item}</p>
-            </li>
-          ))}
-        </ul>
+        <div className="relative mb-[60px]">
+          <p className="text-sm13 mb-6">{t("vacancyDescription")}</p>
+          <h2 className=" font-exo text-title uppercase font-semibold mb-[26px]">
+            {t("vacanciesListTitle")}
+          </h2>
+          <ul className="flex flex-col gap-4 ">
+            {vacanciesList.map((item, index) => (
+              <li key={index} className=" flex items-center gap-4">
+                <div>
+                  <div className="w-1 h-1 bg-accent" />
+                </div>
+                <p className="text-sm11 uppercase">{item}</p>
+              </li>
+            ))}
+          </ul>
+          <div className=" absolute w-[15px] h-full top-0 right-0 flex flex-col justify-between text-title20">
+            <IconArrowsDown />
+            <IconArrowsDown />
+            <IconArrowsDown />
+          </div>
+        </div>
         <div className="relative w-[288px] h-auto mx-auto">
           <h2 className=" font-exo text-title text-xl font-semibold uppercase indent-[90px]">
             {t("formTitle")}

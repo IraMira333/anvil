@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { SocialLinks } from "./Header/SocialLinks";
 import { IconLogo } from "./Icons/IconLogo";
 import { CallUsInfo } from "./shared/CallUsInfo";
+import { UpToTopStatic } from "./shared/UpToTopStatic";
 
 export const Footer = () => {
   const t = useTranslations("HomePage");
@@ -73,6 +74,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+      <UpToTopStatic className="absolute bottom-[109px] left-1/2 -translate-x-1/2" />
     </footer>
   );
 };

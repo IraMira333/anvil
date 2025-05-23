@@ -7,7 +7,7 @@ export const Button = ({ joinUs }: { joinUs?: boolean }) => {
   return (
     <div className="relative w-[288px] h-[56px] group">
       <button
-        className={`${joinUs ? "text-title bg-title20 border border-title20 hover:text-accent hover:border-accent/20" : "text-accent bg-radial-green-50 border border-accent/20"} w-[288px] h-[56px]  uppercase  font-bold text-base hover:bg-radial-green-100 transition-all duration-300 ease-in-out `}
+        className={`${joinUs ? "text-title bg-title20 border border-title20  group-hover:border-accent/20" : "text-accent bg-radial-green-50 border border-accent/20"} w-[288px] h-[56px] group-hover:text-hoverAccent uppercase  font-bold text-base group-hover:bg-radial-green-100 transition-all duration-300 ease-in-out `}
       >
         {text}
       </button>
