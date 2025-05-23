@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Union } from "./Icons/Union";
@@ -38,12 +39,34 @@ export const About = () => {
         {t("about")}
       </h3>
       <div className="px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <div className="h-[100vh] pt-[78px] ">
-          <h1 className="font-exo font-semibold text-2xl text-title mb-4">
-            {t("aboutTitle")}
-          </h1>
-          <p className="text-sm13 w-[95%]">{t("aboutDescription")}</p>
+        <div className="h-screen pt-[78px] flex flex-col">
+          <div>
+            <h1 className="font-exo font-semibold text-2xl text-title mb-4">
+              {t("aboutTitle")}
+            </h1>
+            <p className="text-sm13 w-[95%]">{t("aboutDescription")}</p>
+          </div>
+
+          <div className="flex-1 flex items-center justify-center ">
+            <div className="relative pb-2 w-full">
+              <Image
+                src="/images/dronFront.png"
+                alt="fpv"
+                width={528}
+                height={322}
+                className="w-[70%] mx-auto"
+              />
+              <Image
+                src="/bg/ring.png"
+                alt="decor ring"
+                width={748}
+                height={172}
+                className="absolute bottom-0 left-1/2 -translate-x-1/2"
+              />
+            </div>
+          </div>
         </div>
+
         <div className="pb-[106px]">
           <h2 className="text-center mb-6 font-exo text-title text-2xl font-semibold">
             {t("ourValuesTitle")}

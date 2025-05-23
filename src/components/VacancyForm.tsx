@@ -159,7 +159,9 @@ export const VacancyForm = () => {
         </p>
       </div>
 
-      <Button joinUs />
+      <div className="flex justify-center">
+        <Button joinUs />
+      </div>
     </form>
   );
 };
