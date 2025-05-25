@@ -44,7 +44,7 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="mt-[-30px] relative pb-[90px] clip-path-down-cut-mobile-service"
+      className="mt-[-30px] tab:mt-[-50px] relative pb-[90px] clip-path-down-cut-mobile-service tab:clip-path-down-cut-tab-service"
     >
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
@@ -55,8 +55,8 @@ export const Services = () => {
           }}
         />
       </div>
-      <Union className="absolute top-[16px] left-1/2 -translate-x-1/2 w-[186px] h-auto z-[2]" />
-      <h3 className="absolute top-[21px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
+      <Union className="absolute top-[16px] tab:top-[26px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
+      <h3 className="absolute top-[21px] tab:top-[43px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
         {t("services")}
       </h3>
       <div className="pt-[78px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">

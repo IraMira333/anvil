@@ -15,7 +15,12 @@ const eslintConfig = [
     ignores: ["node_modules", "build", ".next", "out", "public"],
   },
   ...compat.config({
-    plugins: ["tailwindcss", "unused-imports", "simple-import-sort"],
+    plugins: [
+      "tailwindcss",
+      "unused-imports",
+      "simple-import-sort",
+      "prettier",
+    ],
     extends: ["next/core-web-vitals", "next/typescript", "prettier"],
     rules: {
       semi: ["error", "always"],
@@ -48,6 +53,7 @@ const eslintConfig = [
       "tailwindcss/no-custom-classname": "warn",
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
+      "prettier/prettier": "error",
     },
   }),
 ];

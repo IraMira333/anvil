@@ -1,6 +1,12 @@
 {
   "HomePage": {
     "title": "UAV production <br></br>by veterans <br></br>for the defense of the country",
+    "text": "Custom production of drones for military missions.",
+    "lableTitle": "7-inch FPV drone",
+    "lableR": "radius:",
+    "lableKM": "12 km",
+    "lableW": "weight:",
+    "lableKG": "5.8 g",
     "descriptionItem1": "Production of FPV drones / UAV aircraft",
     "descriptionItem2": "Supply of components",
     "descriptionItem3": "Engineering / consulting services",
