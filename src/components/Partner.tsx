@@ -5,6 +5,7 @@ import { Icon1 } from "./Icons/Icon1";
 import { Icon2 } from "./Icons/Icon2";
 import { Icon3 } from "./Icons/Icon3";
 import { Icon4 } from "./Icons/Icon4";
+import { IconArrows } from "./Icons/IconArrows";
 import { Button } from "./shared/Button";
 
 export const Partner = () => {
@@ -35,7 +36,7 @@ export const Partner = () => {
   return (
     <section
       id="partner"
-      className="relative pt-8 pb-[60px] clip-path-hex-notch bg-blackCustom mt-[-46px] z-[2]"
+      className="relative pt-8 tab:pt-[110px] pb-[60px] tab:pb-[56px] clip-path-hex-notch tab:clip-path-hex-notch-tab bg-blackCustom mt-[-46px] tab:mt-[-73px] z-[2]"
     >
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
@@ -47,17 +48,19 @@ export const Partner = () => {
         />
       </div>
       <div className=" relative px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <h1 className="font-exo font-semibold text-2xl text-title mt-[54px] mb-[46px]">
-          {t("weTheBestTitle")}
-        </h1>
-        <p className="text-sm13 w-[194px] ml-auto mr-0 mb-[38px]">
-          {t("weTheBestQuote")}
-        </p>
-        <ul className="mb-[56px]">
+        <div className="tab:flex tab:justify-between tab:mb-[56px]">
+          <h1 className="font-exo font-semibold text-2xl tab:text-3xl text-title mt-[54px] tab:mt-0 mb-[46px] tab:mb-0 tab:w-[315px]">
+            {t("weTheBestTitle")}
+          </h1>
+          <p className="text-sm13 w-[194px] ml-auto mr-0 mb-[38px] tab:mb-0 tab:w-[194px] tab:text-base12 tab:text-justify">
+            {t("weTheBestQuote")}
+          </p>
+        </div>
+        <ul className="mb-[56px] tab:grid tab:grid-cols-2">
           {bestList.map((item, index) => (
             <li
               key={index}
-              className="border-b border-black30 last:border-b-0 mt-4"
+              className="border-b border-black30 last:border-b-0 tab:last:border-b tab:odd:border-r mt-4 tab:px-4"
             >
               <div className="w-9 h-9 mb-6">{item.icon}</div>
               <h4 className="text-title font-semibold mb-4 uppercase">
@@ -75,8 +78,10 @@ export const Partner = () => {
           alt="background image svg - target"
           width={252}
           height={253}
-          className="w-[191px] h-auto absolute z-[-1] top-[20px] right-4 "
+          className="w-[191px] h-auto absolute z-[-1] top-[20px] tab:top-[-57px] right-4 "
         />
+        <IconArrows className="absolute hidden tab:block bottom-5 left-5" />
+        <IconArrows className="absolute hidden tab:block bottom-5 right-5 rotate-180" />
       </div>
     </section>
   );

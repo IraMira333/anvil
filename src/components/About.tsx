@@ -14,7 +14,7 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="mt-[-30px] relative">
+    <section id="about" className="mt-[-50px] relative">
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
           className="w-full h-full bg-no-repeat  "
@@ -34,17 +34,19 @@ export const About = () => {
           }}
         />
       </div>
-      <Union className="absolute top-[15px] left-1/2 -translate-x-1/2 w-[186px] h-auto z-[2]" />
-      <h3 className="absolute top-[21px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
+      <Union className="absolute top-[15px] tab:top-[25px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
+      <h3 className="absolute top-[21px] tab:top-[41px] tab:text-base left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
         {t("about")}
       </h3>
-      <div className="px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <div className="h-screen pt-[78px] flex flex-col">
-          <div>
-            <h1 className="font-exo font-semibold text-2xl text-title mb-4">
+      <div className="px-4 tab:px-[84px] pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
+        <div className="h-screen pt-[78px] tab:pt-[129px] flex flex-col">
+          <div className="">
+            <h1 className="font-exo font-semibold text-2xl tab:text-3xl text-title mb-4 tab:mb-6 tab:w-[480px] tab:text-center mx-auto">
               {t("aboutTitle")}
             </h1>
-            <p className="text-sm13 w-[95%]">{t("aboutDescription")}</p>
+            <p className="text-sm13 w-[95%] tab:w-[474px] tab:text-base12 mx-auto">
+              {t("aboutDescription")}
+            </p>
           </div>
 
           <div className="flex-1 flex items-center justify-center ">
@@ -67,11 +69,11 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="pb-[106px]">
-          <h2 className="text-center mb-6 font-exo text-title text-2xl font-semibold">
+        <div className="pb-[106px] tab:pb-[129px]">
+          <h2 className="text-center mb-6 font-exo text-title text-2xl tab:text-3xl font-semibold">
             {t("ourValuesTitle")}
           </h2>
-          <ul className="flex flex-col gap-4 ">
+          <ul className="flex flex-col gap-4 tab:grid tab:grid-cols-2 tab:gap-5 ">
             {valuesList.map((item, index) => (
               <li key={index} className="mx-auto">
                 <ValueDiv

@@ -17,7 +17,7 @@ export const Header = () => {
             }}
           />
         </div>
-        <div className="h-[64px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto  flex items-center justify-between">
+        <div className="h-[64px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto  flex items-center justify-between ">
           <IconLogo className="relative z-10 w-[72px] tab:w-[92px]" />
           <div className="tab:hidden">
             <LanguageSwitcher />
@@ -32,7 +32,7 @@ export const Header = () => {
       </header>
 
       <div
-        className="relative z-10 w-full h-px bg-title20"
+        className="relative z-10 w-full h-px bg-title20 tab:w-[calc(100%-40px)] pc:w-[calc(100%-120px)] tab:mx-auto"
         aria-hidden="true"
       ></div>
     </>
