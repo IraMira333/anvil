@@ -9,6 +9,9 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
 import { routing } from "@/i18n/routing";
 
+const IS_SHOWN_TO_SEARCH_ENGINES =
+  process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? false : true;
+
 const exo = Exo_2({
   variable: "--font-exo",
   subsets: ["latin"],
@@ -68,9 +71,15 @@ export default async function RootLayout({
       >
         <head>
           <link rel="icon" href="/favicon.ico" sizes="any" />
-          <meta name="image" property="og:image" content="/opengraph.png" />
-          <meta name="twitter:image" content="/opengraph.png" />
-          <meta name="robots" content="noindex" />
+          <meta
+            name="image"
+            property="og:image"
+            content="/images/opengraph.png"
+          />
+          <meta name="twitter:image" content="/images/opengraph.png" />
+          {IS_SHOWN_TO_SEARCH_ENGINES && (
+            <meta name="robots" content="noindex,nofollow" />
+          )}{" "}
         </head>
         <NextIntlClientProvider>
           <Header />
