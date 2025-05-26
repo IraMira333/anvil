@@ -1,9 +1,9 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
 import { Exo_2, Roboto_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
@@ -19,10 +19,30 @@ const robotoMono = Roboto_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Anvil",
-  description: "Anvil",
-};
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations({ locale, namespace: "HomePage" });
+
+  return {
+    metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
+    alternates: {
+      languages: {
+        "en-US": "/en",
+        "uk-UA": "/uk",
+      },
+    },
+    title: t("aboutTitle"),
+    description: t("aboutDescription"),
+    openGraph: {
+      title: t("aboutTitle"),
+      description: t("aboutDescription"),
+      type: "landing",
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
@@ -44,6 +64,12 @@ export default async function RootLayout({
       <body
         className={`${exo.variable} ${robotoMono.variable} antialiased overflow-x-visible`}
       >
+        <head>
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <meta name="image" property="og:image" content="/opengraph.png" />
+          <meta name="twitter:image" content="/opengraph.png" />
+          <meta name="robots" content="noindex" />
+        </head>
         <NextIntlClientProvider>
           <Header />
           <main>{children}</main>
