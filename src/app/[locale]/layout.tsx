@@ -36,7 +36,7 @@ export async function generateMetadata({
     alternates: {
       languages: {
         "en-US": "/en",
-        "uk-UA": "/uk",
+        "uk-UA": "/",
       },
     },
     title: t("aboutTitle"),
@@ -71,9 +71,9 @@ export default async function RootLayout({
         <meta
           name="image"
           property="og:image"
-          content="/images/opengraph.png"
+          content="/images/opengraph.jpg"
         />
-        <meta name="twitter:image" content="/images/opengraph.png" />
+        <meta name="twitter:image" content="/images/opengraph.jpg" />
         {IS_SHOWN_TO_SEARCH_ENGINES && (
           <meta name="robots" content="noindex,nofollow" />
         )}
