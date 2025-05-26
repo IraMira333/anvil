@@ -44,7 +44,7 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="mt-[-30px] tab:mt-[-50px] relative pb-[90px] clip-path-down-cut-mobile-service tab:clip-path-down-cut-tab-service"
+      className="mt-[-30px] tab:mt-[-50px] relative pb-[90px] tab:pb-[100px] clip-path-down-cut-mobile-service tab:clip-path-down-cut-tab-service"
     >
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
@@ -55,24 +55,26 @@ export const Services = () => {
           }}
         />
       </div>
-      <Union className="absolute top-[16px] tab:top-[26px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
+      <Union className="absolute top-[16px] tab:top-[26.4px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
       <h3 className="absolute top-[21px] tab:top-[43px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
         {t("services")}
       </h3>
-      <div className="pt-[78px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <h1 className="font-exo font-semibold text-3xl text-title uppercase mb-8">
+      <div className=" relative pt-[78px] tab:pt-[129px] pc:pt-[133px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
+        <h1 className="font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title uppercase mb-8 w-[250px]">
           {t("specializationTitle")}
         </h1>
-        <ul className="">
+        <ul className="pc:ml-[375px]">
           {servicesList.map((item, index) => (
             <li
               key={index}
-              className="border-t border-black30 last:border-b pt-5 pb-6"
+              className="border-t border-black30 last:border-b pt-5 pc:pt-6 pb-6"
             >
               <Accordion item={item} index={index} />
             </li>
           ))}
         </ul>
+        <div className="hidden pc:block w-9 h-9 border-l border-b absolute bottom-0 left-[60px]" />
+        <div className="hidden pc:block w-9 h-9 border-r border-t absolute top-[133px] right-[60px]" />
       </div>
     </section>
   );

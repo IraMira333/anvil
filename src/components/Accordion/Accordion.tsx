@@ -58,7 +58,7 @@ export function Accordion({
   const toggleAccordion = () => {
     if (contentRef.current) {
       const scrollHeight = contentRef.current.scrollHeight;
-      const extraMargin = 16; // Додаємо 16px до висоти
+      const extraMargin = 16;
       setContentHeight(isAccordionOpen ? 0 : scrollHeight + extraMargin);
       setAccordionOpen(prev => !prev);
     }
@@ -69,22 +69,37 @@ export function Accordion({
       <button
         aria-label="open answer button"
         onClick={toggleAccordion}
-        className="w-full outline-none text-left cursor-pointer"
+        className="w-full outline-none text-left cursor-pointer pc:flex pc:items-start pc:gap-6"
       >
         <div className="flex items-center justify-between gap-4 mb-3">
           <FourSquaresRow index={index + 1} />
           {!item.full ? (
-            <AccordionButton
-              className={`transition-transform duration-300 ${
-                isAccordionOpen ? "rotate-0" : "rotate-180"
-              }`}
-            />
+            <div className="pc:hidden">
+              <AccordionButton
+                className={`transition-transform duration-300 ${
+                  isAccordionOpen ? "rotate-0" : "rotate-180"
+                }`}
+              />
+            </div>
           ) : null}
         </div>
-        <p className="font-exo mb-3 font-semibold text-title uppercase">
-          {item.title}
-        </p>
-        <p className="text-base12">{item.text}</p>
+        <div className="pc:flex pc:items-start pc:justify-between w-full">
+          <div>
+            <p className="font-exo mb-3 font-semibold text-title uppercase pc:text-lg">
+              {item.title}
+            </p>
+            <p className="text-base12 pc:w-[678px]">{item.text}</p>
+          </div>
+          {!item.full ? (
+            <div className="hidden pc:block">
+              <AccordionButton
+                className={`transition-transform duration-300 ${
+                  isAccordionOpen ? "rotate-0" : "rotate-180"
+                }`}
+              />
+            </div>
+          ) : null}
+        </div>
       </button>
       <div
         className="overflow-hidden transition-[max-height] duration-500 ease-in-out"
@@ -93,25 +108,29 @@ export function Accordion({
         }}
       >
         <div
-          className="transition-[padding-top] duration-500 ease-in-out"
-          style={{
-            paddingTop: isAccordionOpen ? "16px" : "0px",
-          }}
+          className={`transition-[padding-top] duration-500 ease-in-out ${
+            isAccordionOpen ? "pt-4 tab:pt-5 pc:pt-4" : "pt-0"
+          }`}
         >
-          <div ref={contentRef} className="">
+          <div
+            ref={contentRef}
+            className="tab:flex tab:gap-5 tab:items-center pc:ml-[82px]"
+          >
             {item.imageURL ? (
-              <div className="w-full h-auto mb-4 ">
+              <div className="w-full tab:w-[39%] aspect-[282/176] h-auto mb-4 tab:mb-0 ">
                 {Array.isArray(item.imageURL) ? (
-                  item.imageURL.map((url: string, idx: number) => (
-                    <Image
-                      key={idx}
-                      src={url}
-                      alt={`${item.title} ${idx + 1}`}
-                      width={282}
-                      height={176}
-                      className="w-full h-auto aspect-[282/176] object-cover "
-                    />
-                  ))
+                  <div className=" tab:flex tab:gap-2">
+                    {item.imageURL.map((url: string, idx: number) => (
+                      <Image
+                        key={idx}
+                        src={url}
+                        alt={`${item.title} ${idx + 1}`}
+                        width={282}
+                        height={176}
+                        className="w-full h-auto aspect-[282/176] object-cover "
+                      />
+                    ))}
+                  </div>
                 ) : (
                   <Image
                     src={item.imageURL}
@@ -124,7 +143,7 @@ export function Accordion({
               </div>
             ) : null}
             {item.list ? (
-              <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-4 tab:pr-12 tab:text-base12">
                 {item.list.map((listItem: string, index: number) => (
                   <li key={index} className="flex items-center gap-2">
                     <div className="w-4 h-4 flex items-center justify-center">

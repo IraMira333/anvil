@@ -18,7 +18,7 @@ export const SocialLinks = ({ className }: { className?: string }) => {
     },
   ];
   return (
-    <ul className={`${className} flex  justify-between `}>
+    <ul className={`${className} flex justify-between `}>
       {socialList.map(content => (
         <li key={content.name} className="uppercase font-bold text-title">
           <a

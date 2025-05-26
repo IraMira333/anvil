@@ -13,10 +13,10 @@ export const DecorGrid = () => {
         <div className="border-t border-r border-title" />
         <div className="border-t border-title" />
       </div>
-      <div className="absolute border-t border-l border-title20 w-4 h-4 top-9 left-4" />
-      <div className="absolute border-t border-r border-title20 w-4 h-4 top-9 right-4" />
-      <div className="absolute border-b border-l border-title20 w-4 h-4 bottom-[90px] left-4" />
-      <div className="absolute border-b border-r border-title20 w-4 h-4 bottom-[90px] right-4" />
+      <div className="absolute border-t border-l border-title20 w-4 h-4 tab:w-5 tab:h-5 pc:w-9 pc:h-9 top-9 left-4 tab:top-[56px] tab:left-5 pc:top-[60px] pc:left-[60px]" />
+      <div className="absolute border-t border-r border-title20 w-4 h-4 tab:w-5 tab:h-5 pc:w-9 pc:h-9 top-9 right-4 tab:top-[56px] tab:right-5 pc:top-[60px] pc:right-[60px]" />
+      <div className="absolute border-b border-l border-title20 w-4 h-4 tab:w-5 tab:h-5 pc:w-9 pc:h-9 bottom-[90px] left-4 tab:bottom-[110px] tab:left-5 pc:bottom-[110px] pc:left-[60px]" />
+      <div className="absolute border-b border-r border-title20 w-4 h-4 tab:w-5 tab:h-5 pc:w-9 pc:h-9 bottom-[90px] right-4 tab:bottom-[110px] tab:right-5 pc:bottom-[110px] pc:right-[60px]" />
     </>
   );
 };

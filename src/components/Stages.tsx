@@ -13,7 +13,10 @@ export const Stages = () => {
   ];
 
   return (
-    <section id="stages" className="mt-[-30px] relative pb-[105px]">
+    <section
+      id="stages"
+      className="mt-[-30px] tab:mt-[-50px] relative pb-[105px] tab:pb-[131px] pc:pb-[179px]"
+    >
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
           className="w-full h-full bg-no-repeat  "
@@ -33,20 +36,22 @@ export const Stages = () => {
           }}
         />
       </div>
-      <Union className="absolute top-[15px] left-1/2 -translate-x-1/2 w-[186px] h-auto z-[2]" />
-      <h3 className="absolute top-[21px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
+      <Union className="absolute top-[15px] tab:top-[26.4px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
+      <h3 className="absolute top-[21px] tab:top-[43px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
         {t("stages")}
       </h3>
       <div className="relative px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <div className="pt-[78px] text-center mb-[53px]">
-          <h1 className="font-exo font-semibold text-2xl text-title mb-4">
+        <div className="pt-[78px] tab:pt-[129px] pc:pt-[133px] text-center mb-[53px] tab:mb-[56px] max-w-[498px] mx-auto">
+          <h1 className="font-exo font-semibold text-3xl pc:text-4xl text-title mb-4 tab:mb-6 pc:mb-4">
             {t("stagesTitle")}
           </h1>
-          <p className="text-base13 w-[95%]">{t("stagesDescription")}</p>
+          <p className="text-base13 w-[95%] pc:text-lg12">
+            {t("stagesDescription")}
+          </p>
         </div>
-        <ul className="flex flex-col gap-4 mb-[37px] justify-center mx-auto max-w-[350px]">
+        <ul className="flex flex-col tab:flex-row tab:flex-wrap gap-4 tab:gap-5 pc:gap-8 mb-[37px] tab:mb-[56px] pc:mb-[60px] justify-center mx-auto max-w-[350px] tab:max-w-full">
           {stagesList.map((item, index) => (
-            <li key={index} className="mx-auto">
+            <li key={index} className="mx-auto tab:mx-0">
               <StagesCard
                 title={item.title}
                 description={item.description}

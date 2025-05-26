@@ -14,14 +14,14 @@ export const Gallery = () => {
   return (
     <section
       id="gallery"
-      className="relative pt-[65px] pb-[105px] clip-path-hex-notch-galery mt-[-45px] z-[20] bg-blackCustom"
+      className="relative pt-[65px] tab:pt-[130px] pb-[105px] clip-path-hex-notch-galery tab:clip-path-hex-notch-galery-tab mt-[-45px] tab:mt-[-73px] z-[20] bg-blackCustom"
     >
-      <Union className="absolute top-[2px] left-1/2 -translate-x-1/2 w-[186px] h-auto z-[2]" />
-      <h3 className="absolute top-[8px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
+      <Union className="absolute top-[2px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
+      <h3 className="absolute top-[8px] tab:top-5 left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
         {t("gallery")}
       </h3>
       <div className="relative px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <h2 className="font-exo font-semibold uppercase text-center text-3xl mb-8">
+        <h2 className="font-exo font-semibold uppercase text-center tab:text-left text-3xl pc:text-5xl mb-8 pc:mb-12">
           {t("portfolioTitle")}
         </h2>
         <SliderGallery projects={projects} />

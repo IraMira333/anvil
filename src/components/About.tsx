@@ -39,12 +39,12 @@ export const About = () => {
         {t("about")}
       </h3>
       <div className="px-4 tab:px-[84px] pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <div className="h-screen pt-[78px] tab:pt-[129px] flex flex-col">
+        <div className="h-screen pt-[78px] tab:pt-[129px] pc:pt-[133px] flex flex-col">
           <div className="">
-            <h1 className="font-exo font-semibold text-2xl tab:text-3xl text-title mb-4 tab:mb-6 tab:w-[480px] tab:text-center mx-auto">
+            <h1 className="font-exo font-semibold text-2xl tab:text-3xl pc:text-4xl text-title mb-4 tab:mb-6 pc:mb-4 tab:w-[480px] pc:w-[550px] tab:text-center mx-auto">
               {t("aboutTitle")}
             </h1>
-            <p className="w-[95%] tab:w-[474px] text-base12 mx-auto">
+            <p className="w-[95%] tab:w-[474px] text-base12 pc:text-lg12 mx-auto pc:w-[550px]">
               {t("aboutDescription")}
             </p>
           </div>
@@ -56,7 +56,7 @@ export const About = () => {
                 alt="fpv"
                 width={528}
                 height={322}
-                className="w-[70%] mx-auto"
+                className="w-[70%] mx-auto max-w-[528px]"
               />
               <Image
                 src="/bg/ring.png"
@@ -69,13 +69,16 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="pb-[106px] tab:pb-[129px]">
-          <h2 className="text-center mb-6 font-exo text-title text-2xl tab:text-3xl font-semibold">
+        <div className="pb-[106px] tab:pb-[129px] pc:pb-[140px]">
+          <h2 className="text-center mb-6 font-exo text-title text-3xl pc:text-4xl font-semibold">
             {t("ourValuesTitle")}
           </h2>
-          <ul className="flex flex-col gap-4 tab:grid tab:grid-cols-2 tab:gap-5 ">
+          <ul className="flex flex-col gap-4 tab:grid tab:grid-cols-2 tab:gap-5 pc:gap-6 tab:justify-items-center ">
             {valuesList.map((item, index) => (
-              <li key={index} className="mx-auto">
+              <li
+                key={index}
+                className="mx-auto tab:even:mr-auto tab:even:ml-0 tab:odd:mr-0 tab:odd:ml-auto"
+              >
                 <ValueDiv
                   title={item.title}
                   description={item.description}
