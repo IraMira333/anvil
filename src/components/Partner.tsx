@@ -52,7 +52,7 @@ export const Partner = () => {
           <h1 className="font-exo font-semibold text-2xl tab:text-3xl text-title mt-[54px] tab:mt-0 mb-[46px] tab:mb-0 tab:w-[315px]">
             {t("weTheBestTitle")}
           </h1>
-          <p className="text-sm13 w-[194px] ml-auto mr-0 mb-[38px] tab:mb-0 tab:w-[194px] tab:text-base12 tab:text-justify">
+          <p className="w-[194px] ml-auto mr-0 mb-[38px] tab:mb-0 tab:w-[194px] text-base12 tab:text-justify">
             {t("weTheBestQuote")}
           </p>
         </div>
@@ -66,7 +66,7 @@ export const Partner = () => {
               <h4 className="text-title font-semibold mb-4 uppercase">
                 {item.title}
               </h4>
-              <p className="text-sm12 pb-4">{item.text}</p>
+              <p className="text-base12 pb-4">{item.text}</p>
             </li>
           ))}
         </ul>

@@ -80,7 +80,7 @@ export const Hero = () => {
             {descriptionList.map((item, index) => (
               <li
                 key={index}
-                className="flex items-center gap-2 uppercase text-sm13 tab:text-base13 font-medium"
+                className="flex items-center gap-2 uppercase text-base13 font-medium"
               >
                 <div>
                   <ListStyleTypeFourSquare index={4} />

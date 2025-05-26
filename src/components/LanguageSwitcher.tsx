@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
   }, [pathName, searchParams]);
 
   return (
-    <ul className="relative z-10 flex gap-1 uppercase text-base tab:text-sm1 leading-3 pc:text-base tab:leading-[10px] pc:leading-3 pb-1 ">
+    <ul className="relative z-10 flex gap-1 uppercase text-base leading-3 pc:text-base tab:leading-[10px] pc:leading-3 pb-1 ">
       {locales.map(curLocale => (
         <li
           key={curLocale}

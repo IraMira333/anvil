@@ -18,7 +18,7 @@ export const ValueDiv = ({
       <h4 className=" font-exo font-semibold uppercase text-title tab:text-base mb-3 tab:mb-[10px]">
         {title}
       </h4>
-      <p className="w-[230px] text-sm13 tab:text-base12">{description}</p>
+      <p className="w-[230px] text-base tab:text-base12">{description}</p>
       <div className=" absolute top-6 right-6 ">
         <ListStyleTypeFourSquare index={index} />
       </div>
