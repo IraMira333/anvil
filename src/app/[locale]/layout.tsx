@@ -44,7 +44,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("aboutTitle"),
       description: t("aboutDescription"),
-      type: "landing",
+      type: "website",
     },
   };
 }
@@ -66,21 +66,21 @@ export default async function RootLayout({
   }
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta
+          name="image"
+          property="og:image"
+          content="/images/opengraph.png"
+        />
+        <meta name="twitter:image" content="/images/opengraph.png" />
+        {IS_SHOWN_TO_SEARCH_ENGINES && (
+          <meta name="robots" content="noindex,nofollow" />
+        )}
+      </head>
       <body
         className={`${exo.variable} ${robotoMono.variable} antialiased overflow-x-visible`}
       >
-        <head>
-          <link rel="icon" href="/favicon.ico" sizes="any" />
-          <meta
-            name="image"
-            property="og:image"
-            content="/images/opengraph.png"
-          />
-          <meta name="twitter:image" content="/images/opengraph.png" />
-          {IS_SHOWN_TO_SEARCH_ENGINES && (
-            <meta name="robots" content="noindex,nofollow" />
-          )}{" "}
-        </head>
         <NextIntlClientProvider>
           <Header />
           <main>{children}</main>
