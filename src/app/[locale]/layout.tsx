@@ -20,10 +20,12 @@ const robotoMono = Roboto_Mono({
 });
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return {
