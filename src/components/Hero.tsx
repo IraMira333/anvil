@@ -37,13 +37,13 @@ export const Hero = () => {
         />
       </div>
       <div className="px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <div className="tab:flex tab:justify-between">
-          <h1 className="uppercase font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title mb-4 tab:mb-0">
+        <div className="tab:flex tab:justify-between relative">
+          <h1 className="uppercase font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title mb-4 tab:mb-0 tab:w-[400px] pc:w-[600px]">
             {t.rich("title", {
               br: () => <br />,
             })}
           </h1>
-          <div className="hidden tab:block relative min-w-[211px] min-h-[89px] tab:mt-4 tab:mr-2 pc:mr-0">
+          <div className="hidden tab:block absolute top-4 right-0 min-w-[211px] min-h-[89px]">
             <Image
               src="/bg/rectangleHero.svg"
               alt="background rectangle"
