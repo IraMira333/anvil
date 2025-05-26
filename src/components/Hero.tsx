@@ -43,12 +43,13 @@ export const Hero = () => {
               br: () => <br />,
             })}
           </h1>
-          <div className="hidden tab:block relative w-[211px] h-[89px] tab:mt-4 tab:mr-2 pc:mr-0">
+          <div className="hidden tab:block relative min-w-[211px] min-h-[89px] tab:mt-4 tab:mr-2 pc:mr-0">
             <Image
               src="/bg/rectangleHero.svg"
               alt="background rectangle"
               width={211}
               height={89}
+              className="w-full h-full"
             />
             <div className="absolute text-sm1 top-0 left-0 w-full h-full pt-4 pl-[30px] uppercase z-[-1]">
               <p className="mb-3">{t("lableTitle")}</p>
