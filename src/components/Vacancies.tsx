@@ -37,8 +37,8 @@ export const Vacancies = () => {
           height={600}
           className="min-w-[288px] min-h-[288px] w-[100vw] h-auto max-w-[600px] max-h-[600px] aspect-square bg-[#141414] opacity-[0.45]"
         />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[288px] h-auto">
-          <h2 className="font-exo text-title text-xl font-semibold uppercase indent-[80px]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[288px] w-[70%] max-w-[330px] h-auto">
+          <h2 className="font-exo text-title text-2xl font-semibold uppercase indent-[80px]">
             {t("vacancyTitle")}
           </h2>
           <div className="block w-[11px] h-[18px] border border-r-0 border-accent absolute top-0 left-0" />

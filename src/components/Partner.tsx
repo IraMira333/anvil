@@ -49,7 +49,7 @@ export const Partner = () => {
       </div>
       <div className=" relative px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
         <div className="tab:flex tab:justify-between tab:mb-[56px]">
-          <h1 className="font-exo font-semibold text-2xl tab:text-3xl text-title mt-[54px] tab:mt-0 mb-[46px] tab:mb-0 tab:w-[315px]">
+          <h1 className="font-exo font-semibold text-3xl text-title mt-[54px] tab:mt-0 mb-[46px] tab:mb-0 tab:w-[315px]">
             {t("weTheBestTitle")}
           </h1>
           <p className="w-[194px] ml-auto mr-0 mb-[38px] tab:mb-0 tab:w-[194px] text-base12 tab:text-justify">
