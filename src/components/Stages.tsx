@@ -42,7 +42,7 @@ export const Stages = () => {
           <h1 className="font-exo font-semibold text-2xl text-title mb-4">
             {t("stagesTitle")}
           </h1>
-          <p className="text-sm13 w-[95%]">{t("stagesDescription")}</p>
+          <p className="text-base13 w-[95%]">{t("stagesDescription")}</p>
         </div>
         <ul className="flex flex-col gap-4 mb-[37px] justify-center mx-auto max-w-[350px]">
           {stagesList.map((item, index) => (

@@ -62,7 +62,7 @@ export function Accordion({
         <p className="font-exo mb-3 font-semibold text-title uppercase">
           {item.title}
         </p>
-        <p className="text-sm12">{item.text}</p>
+        <p className="text-base12">{item.text}</p>
       </button>
       <div
         className="overflow-hidden transition-[max-height] duration-500 ease-in-out"

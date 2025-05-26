@@ -28,7 +28,7 @@ export const StagesCard = ({
           </h4>
         </div>
       </div>
-      <p className="text-sm12">{description}</p>
+      <p className="text-base">{description}</p>
     </div>
   );
 };

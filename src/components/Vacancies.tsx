@@ -47,7 +47,7 @@ export const Vacancies = () => {
       </div>
       <div className="px-4 tab:px-5 pc:px-60 max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
         <div className="relative mb-[60px]">
-          <p className="text-sm13 mb-6">{t("vacancyDescription")}</p>
+          <p className="text-base13 mb-6">{t("vacancyDescription")}</p>
           <h2 className=" font-exo text-title uppercase font-semibold mb-[26px]">
             {t("vacanciesListTitle")}
           </h2>
@@ -57,7 +57,7 @@ export const Vacancies = () => {
                 <div>
                   <div className="w-1 h-1 bg-accent" />
                 </div>
-                <p className="text-sm11 uppercase">{item}</p>
+                <p className="uppercase">{item}</p>
               </li>
             ))}
           </ul>
