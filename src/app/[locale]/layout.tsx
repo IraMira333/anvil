@@ -45,6 +45,14 @@ export async function generateMetadata({
       title: t("aboutTitle"),
       description: t("aboutDescription"),
       type: "website",
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: "OpenGraph Image",
+        },
+      ],
     },
   };
 }
@@ -69,7 +77,6 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="type" property="og:type" content="website" />
-        <meta property="og:image" content="<generated>" />
         {IS_SHOWN_TO_SEARCH_ENGINES && (
           <meta name="robots" content="noindex,nofollow" />
         )}

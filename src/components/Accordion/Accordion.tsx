@@ -100,16 +100,16 @@ export function Accordion({
         >
           <div ref={contentRef} className="">
             {item.imageURL ? (
-              <div className="w-full h-auto mb-4">
+              <div className="w-full h-auto mb-4 ">
                 {Array.isArray(item.imageURL) ? (
                   item.imageURL.map((url: string, idx: number) => (
                     <Image
                       key={idx}
                       src={url}
                       alt={`${item.title} ${idx + 1}`}
-                      width={578}
-                      height={325}
-                      className="w-full h-full object-cover"
+                      width={282}
+                      height={176}
+                      className="w-full h-auto aspect-[282/176] object-cover "
                     />
                   ))
                 ) : (
@@ -118,7 +118,7 @@ export function Accordion({
                     alt={`${item.title}`}
                     width={578}
                     height={325}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full aspect-[282/176] object-cover"
                   />
                 )}
               </div>
