@@ -56,7 +56,7 @@ export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
           {projects.map(project => (
             <div
               key={project.title}
-              className="flex-[0_0_100%] tab:flex-[0_0_46%] w-full px-[5px] pc:px-2"
+              className="flex-[0_0_100%] tab:flex-[0_0_46%] w-full px-[5px] pc:px-3"
             >
               {project.imageURL ? (
                 <Image
@@ -64,15 +64,15 @@ export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
                   alt={project.title}
                   width={578}
                   height={325}
-                  className="aspect-[288/161] object-cover w-full h-auto mb-2"
+                  className="aspect-[288/161] object-cover w-full h-auto mb-2 pc:mb-3"
                 />
               ) : null}
-              <p className=" uppercase font-bold">{project.title}</p>
+              <p className=" uppercase font-bold pc:text-lg">{project.title}</p>
             </div>
           ))}
         </div>
-        <div className="tab:hidden right-0 mt-7 ">
-          <div className="flex justify-between gap-4">
+        <div className="tab:absolute tab:top-[-92px] pc:top-[-100px] tab:right-0 mt-7 ">
+          <div className="flex justify-between gap-4 tab:gap-5 pc:gap-6">
             <PrevButton
               onClick={onPrevButtonClick}
               disabled={prevBtnDisabled}

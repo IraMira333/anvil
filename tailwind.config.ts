@@ -94,6 +94,12 @@ const config: Config = {
           lineHeight: "24px",
         },
       ],
+      "2xl13": [
+        "24px",
+        {
+          lineHeight: "31px",
+        },
+      ],
       "3xl": [
         "28px",
         {
@@ -133,6 +139,7 @@ const config: Config = {
         title20: "#F8F8F833",
         blackCustom: "#141414",
         black30: "#303030",
+        corner: "#CCCCCC",
       },
       clipPath: {
         "hex-notch":
@@ -141,11 +148,13 @@ const config: Config = {
           "polygon(0 73px, 50px 23px, calc(50% - 171px) 23px, calc(50% - 150px) 0, calc(50% + 150px) 0, calc(50% + 171px) 23px, calc(100% - 50px) 23px, 100% 73px, 100% 100%, 0 100%)",
         "hex-notch-galery":
           "polygon(0 45px, 16px 15px, calc(50% - 93px) 15px, calc(50% - 82px) 2px, calc(50% + 82px) 2px, calc(50% + 93px) 15px, calc(100% - 16px) 15px, 100% 45px, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, calc(50% + 92.5px) 100%, calc(50% + 82px) calc(100% - 13px), calc(50% - 81.3px) calc(100% - 13px), calc(50% - 92.5px) 100%, 16px 100%, 0 calc(100% - 30px))",
+        "hex-notch-galery-tab":
+          "polygon(0 73px, 50px 25px, calc(50% - 170px) 25px, calc(50% - 149px) 2px, calc(50% + 150px) 2px, calc(50% + 169px) 25px, calc(100% - 50px) 25px, 100% 73px, 100% 0, 100% calc(100% - 50px), calc(100% - 23px) 100%, calc(50% + 169px) 100%, calc(50% + 150px) calc(100% - 23.5px), calc(50% - 149.4px) calc(100% - 23.5px), calc(50% - 170px) 100%, 23px 100%, 0 calc(100% - 50px))",
+
         "down-cut-mobile-service":
           "polygon(0 0, 16px 30px, calc(50% - 94px) 30px, calc(50% - 82px) 16px, calc(50% + 82px) 16px, calc(50% + 94px) 30px, calc(100% - 16px) 30px, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 30px))",
         "down-cut-tab-service":
           "polygon(0 0, 50px 50px, calc(50% - 169px) 50px, calc(50% - 149px) 27px, calc(50% + 149.5px) 27px, calc(50% + 168.5px) 50px, calc(100% - 50px) 50px, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 50px 100%, 0 calc(100% - 50px))",
-
         "down-cut-mobile":
           "polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 30px))",
         "down-cut-tab":

@@ -64,7 +64,7 @@ export const VacancyForm = () => {
   };
 
   const inputClass =
-    "mt-6 mb-7 block w-full bg-transparent border-0 pb-6 pl-[18px] font-exo placeholder:uppercase font-semibold text-title placeholder:text-text group-focus:outline-none focus:ring-0";
+    "mt-6 tab:mt-0 mb-7 tab:mb-4 placeholder:text-sm13 placeholder:pc:text-lg13 pc:text-2xl13 block w-full bg-transparent border-0 pb-6 tab:pb-[10px] pc:pb-7 tab:pt-[15px] pc:pt-[29px] pl-[18px] pr-4 tab:pl-7 pc:pl-[52px] font-exo placeholder:uppercase font-semibold text-title placeholder:text-text group-focus:outline-none focus:ring-0";
 
   return (
     <form
@@ -79,7 +79,7 @@ export const VacancyForm = () => {
           placeholder={t("formName")}
           value={formData.name}
           onChange={e => setFormData({ ...formData, name: e.target.value })}
-          className={`${inputClass}`}
+          className={`${inputClass} `}
         />
         <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
         {errors.name && (
@@ -139,7 +139,7 @@ export const VacancyForm = () => {
           </p>
         )}
       </div>
-      <div className="flex gap-2 text-sm13 mb-10">
+      <div className="flex gap-2 text-sm13 mb-10 tab:hidden">
         <div>
           <span className="block w-2 h-2 bg-accent mt-1"></span>
         </div>
@@ -159,7 +159,7 @@ export const VacancyForm = () => {
         </p>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center tab:mt-[53px] pc:mt-[72px] tab:justify-start">
         <Button joinUs />
       </div>
     </form>

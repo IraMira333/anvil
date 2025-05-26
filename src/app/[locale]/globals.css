@@ -10,6 +10,9 @@
   overflow: hidden;
   /* padding-right: 17px; */
 }
+/* * {
+  outline: 1px solid red;
+} */
 
 body {
   background: var(--background);
