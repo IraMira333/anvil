@@ -27,9 +27,31 @@ export function Accordion({
   const contentRef = useRef<HTMLParagraphElement>(null);
   useEffect(() => {
     if (index === 0 && contentRef.current) {
-      const scrollHeight = contentRef.current.scrollHeight;
-      const extraMargin = 16;
-      setContentHeight(scrollHeight + extraMargin);
+      const updateHeight = () => {
+        const scrollHeight = contentRef.current!.scrollHeight;
+        const extraMargin = 16;
+        setContentHeight(scrollHeight + extraMargin);
+      };
+
+      // 1. Одразу після mount
+      updateHeight();
+
+      // 2. Після повного завантаження зображень
+      const images = contentRef.current.querySelectorAll("img");
+      let loadedCount = 0;
+
+      images.forEach(img => {
+        if (img.complete) {
+          loadedCount++;
+        } else {
+          img.addEventListener("load", () => {
+            loadedCount++;
+            if (loadedCount === images.length) {
+              updateHeight();
+            }
+          });
+        }
+      });
     }
   }, [index]);
 
