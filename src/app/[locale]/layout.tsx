@@ -68,12 +68,8 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta
-          name="image"
-          property="og:image"
-          content="/images/opengraph.jpg"
-        />
-        <meta name="twitter:image" content="/images/opengraph.jpg" />
+        <meta name="type" property="og:type" content="website" />
+        <meta property="og:image" content="<generated>" />
         {IS_SHOWN_TO_SEARCH_ENGINES && (
           <meta name="robots" content="noindex,nofollow" />
         )}
