@@ -36,7 +36,7 @@ export async function generateMetadata({
     alternates: {
       languages: {
         "en-US": "/en",
-        "uk-UA": "/uk",
+        "uk-UA": "/",
       },
     },
     title: t("aboutTitle"),
