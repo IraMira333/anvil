@@ -71,7 +71,7 @@ export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
             </div>
           ))}
         </div>
-        <div className="tab:absolute tab:top-[-92px] pc:top-[-100px] tab:right-0 mt-7 ">
+        <div className="tab:absolute tab:top-[-92px] pc:top-[-100px] tab:right-0 mt-12 ">
           <div className="flex justify-between gap-4 tab:gap-5 pc:gap-6">
             <PrevButton
               onClick={onPrevButtonClick}

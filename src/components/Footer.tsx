@@ -11,14 +11,14 @@ export const Footer = () => {
   const t = useTranslations("HomePage");
 
   return (
-    <footer className="relative overflow-hidden pt-8 pc:pt-0 pb-[183px] tab:pb-[80px] pc:pb-10">
+    <footer className="relative overflow-hidden  pb-[183px] tab:pb-[80px] pc:pb-10">
       <div className="absolute inset-0 z-[-1] flex justify-center">
         <Image
-          src="/bg/kolo.png"
+          src="/bg/kolo.svg"
           alt="circle decor"
           width={2000}
           height={2000}
-          className="absolute top-[102px] pc:top-4 left-1/2 -translate-x-1/2 w-[150vw] max-w-none h-auto"
+          className="absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[150vw] max-w-none h-auto"
           priority
         />
       </div>
@@ -38,7 +38,7 @@ export const Footer = () => {
           alt="dron front"
           width={671}
           height={409}
-          className="w-[70%] min-w-[288px] max-w-[540px] tab:max-w-[631px] pc:max-w-[671px] mx-auto"
+          className="w-[70%] min-w-[288px] max-w-[540px] tab:max-w-[631px] pc:max-w-[671px] mx-auto -mt-8"
         />
       </div>
       <div className="px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
@@ -62,7 +62,7 @@ export const Footer = () => {
               {t("policy")}
             </a>
             <p className="w-[144px] tab:w-full ">
-              &#169; ANVIL. All rights reserved.
+              &#169; ANVIL. {t("privacy")}
             </p>
           </div>
           <div className="pc:flex flex-col gap-2 font-exo hidden pc:mr-12 pc:w-1/3">

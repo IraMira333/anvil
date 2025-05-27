@@ -19,7 +19,7 @@ export const Hero = () => {
     >
       <div className="hidden tab:block absolute inset-0 z-[-1] overflow-hidden">
         <div
-          className="w-full h-full bg-no-repeat rotate-180 "
+          className="w-full h-full bg-no-repeat rotate-180 pc:mb-[70px]"
           style={{
             backgroundImage: "url('/bg/web-radial.svg')",
             backgroundSize: "auto 100%",
