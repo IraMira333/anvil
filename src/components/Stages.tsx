@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 
 import { Union } from "./Icons/Union";
+import { AnimatedCard } from "./shared/AnimatedCard";
 import { Button } from "./shared/Button";
 import { StagesCard } from "./shared/StagesCard";
 
@@ -51,13 +52,13 @@ export const Stages = () => {
         </div>
         <ul className="flex flex-col tab:flex-row tab:flex-wrap gap-4 tab:gap-5 pc:gap-8 mb-[37px] tab:mb-[56px] pc:mb-[60px] justify-center mx-auto max-w-[350px] tab:max-w-full">
           {stagesList.map((item, index) => (
-            <li key={index} className="mx-auto tab:mx-0">
+            <AnimatedCard key={index}>
               <StagesCard
                 title={item.title}
                 description={item.description}
                 index={index}
               />
-            </li>
+            </AnimatedCard>
           ))}
         </ul>
         <div className="flex justify-center">
