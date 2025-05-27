@@ -14,7 +14,7 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="mt-[-50px] relative">
+    <section id="about" className="mt-[-30px] tab:mt-[-50px] relative">
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
           className="w-full h-full bg-no-repeat  "
