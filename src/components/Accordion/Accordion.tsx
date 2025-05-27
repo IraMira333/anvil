@@ -83,7 +83,7 @@ export function Accordion({
             </div>
           ) : null}
         </div>
-        <div className="pc:flex pc:items-start pc:justify-between w-full">
+        <div className="pc:flex pc:items-start pc:justify-between w-full tab:w-[93%]">
           <div>
             <p className="font-exo mb-3 font-semibold text-title uppercase pc:text-lg">
               {item.title}
