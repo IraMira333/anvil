@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 
 import { Button } from "./shared/Button";
 import { ListStyleTypeFourSquare } from "./shared/ListStyleTypeFourSquare";
+import ModelViewer from "./shared/ModelViewer";
 
 export const Hero = () => {
   const t = useTranslations("HomePage");
@@ -17,7 +18,7 @@ export const Hero = () => {
       className="pt-8 pb-[88px] relative bg-blackCustom clip-path-down-cut-mobile
     tab:pt-[56px] pc:pt-[60px] tab:pb-[162px] pc:pb-[110px] tab:clip-path-down-cut-tab "
     >
-      <div className="hidden tab:block absolute inset-0 z-[-1] overflow-hidden">
+      <div className="hidden tab:block absolute inset-0 z-[-4] overflow-hidden">
         <div
           className="w-full h-full bg-no-repeat rotate-180 pc:mb-[70px]"
           style={{
@@ -27,7 +28,7 @@ export const Hero = () => {
           }}
         />
       </div>
-      <div className="absolute inset-0 z-[-2] overflow-hidden">
+      <div className="absolute inset-0 z-[-5] overflow-hidden">
         <div
           className="w-full h-full "
           style={{
@@ -67,13 +68,14 @@ export const Hero = () => {
             <div className="w-1 h-1 bg-accent absolute top-[-2px] left-[-2px]" />
           </div>
         </div>
-        <div className="w-full tab:w-[70%] h-auto mb-8 tab:mb-[83px] pc:mb-5 pc:mt-[-107px] mx-auto">
+        <div className="relative w-full aspect-[288/170] z-10">
+          <ModelViewer />
           <Image
-            src="/images/dron.png"
-            alt="fpv"
-            width={757}
-            height={447}
-            className="mx-auto"
+            src="/bg/ring.png"
+            alt="decor ring"
+            width={748}
+            height={172}
+            className="absolute bottom-[30%] left-1/2 -translate-x-1/2"
           />
         </div>
         <div className="flex flex-col tab:flex-row gap-10 justify-center tab:justify-between mx-auto max-w-[330px] tab:max-w-full">

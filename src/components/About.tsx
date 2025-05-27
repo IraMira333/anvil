@@ -27,7 +27,7 @@ export const About = () => {
       </div>
       <div className="absolute inset-0 z-[-2] overflow-hidden">
         <div
-          className="w-full h-full bg-no-repeat bg-center filter blur-[130px] "
+          className="w-full h-full bg-no-repeat bg-center filter blur-[150px] "
           style={{
             backgroundImage: "url('/bg/bgAbout.jpg')",
             backgroundSize: "cover",
