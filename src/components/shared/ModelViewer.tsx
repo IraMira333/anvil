@@ -37,7 +37,6 @@ export default function ModelViewer() {
         camera={{ position: [0, 0, 10], fov: 50 }}
         className="absolute inset-0 w-full h-full"
       >
-        <fog attach="fog" args={["#f5f5f5", 10, 30]} />
         <ambientLight intensity={1.2} />
         <spotLight
           position={[10, 10, 10]}
@@ -47,7 +46,7 @@ export default function ModelViewer() {
           castShadow
         />
         <hemisphereLight args={["#eeeeee", "#444444", 1]} />
-        <Environment preset="sunset" environmentIntensity={0.3} />
+        <Environment preset="sunset" environmentIntensity={0.1} />
         <Suspense fallback={null}>
           <Model />
         </Suspense>

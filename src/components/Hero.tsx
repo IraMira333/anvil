@@ -92,7 +92,7 @@ export const Hero = () => {
               </li>
             ))}
           </ul>
-          <div className="mx-auto w-[288px] ml-auto mr-0 pc:mt-[-19px]">
+          <div className="mx-auto w-[288px] pc:ml-auto pc:mr-0 pc:mt-[-19px]">
             <p className="hidden tab:block mb-5 text-base12 tab:min-w-[57px]">
               {t("text")}
             </p>
