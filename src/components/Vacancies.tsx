@@ -17,7 +17,7 @@ export const Vacancies = () => {
   return (
     <section
       id="vacancy"
-      className="relative pb-[60px] mx-auto -mt-8 tab:mt-[-50px] overflow-hidden"
+      className="relative pb-[120px] mx-auto -mt-8 tab:mt-[-50px] overflow-hidden"
     >
       <Union className="absolute top-[18.5px] tab:top-[26px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
       <h3 className="absolute top-[24px] tab:top-[42px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
@@ -41,7 +41,7 @@ export const Vacancies = () => {
           className="min-w-[288px] min-h-[288px] w-[100vw] h-auto max-w-[540px] max-h-[540px] pc:max-w-[600px] pc:max-h-[600px] aspect-square bg-[#141414] opacity-[0.45]"
         />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[288px] w-[70%] max-w-[330px] h-auto">
-          <h2 className="font-exo text-title text-2xl font-semibold uppercase indent-[80px]">
+          <h2 className="font-exo text-title text-2xl font-semibold uppercase indent-[40px]">
             {t("vacancyTitle")}
           </h2>
           <div className="block w-[11px] h-[18px] border border-r-0 border-accent absolute top-0 left-0" />
@@ -112,7 +112,7 @@ export const Vacancies = () => {
         <div className="tab:flex tab:gap-5 pc:justify-between">
           <div className="tab:w-[45%] pc:w-[600px] tab:min-w-[331px] ">
             <div className="relative w-[288px] h-auto mx-auto tab:mx-0 tab:w-[331px] pc:w-[580px] ">
-              <h2 className=" font-exo text-title text-xl pc:text-4xl12 font-semibold uppercase indent-[90px] tab:indent-[100px] pc:indent-[170px] tab:w-[95%] ">
+              <h2 className=" font-exo text-title text-[23px] pc:text-4xl12 font-semibold uppercase indent-[40px] tab:indent-[100px] pc:indent-[170px] tab:w-[95%] ">
                 {t("formTitle")}
               </h2>
               <div className="block w-[11px] h-[18px] tab:w-[6px] pc:w-[10px] tab:h-[14px] pc:h-[25px] border border-r-0 border-accent absolute top-0 tab:top-[6px] pc:top-[10px] left-0" />
