@@ -52,7 +52,7 @@ export const Footer = () => {
           <SocialLinks className="mt-6 mb-8 tab:my-0 tab:flex-col tab:justify-between tab:text-sm1 pc:w-[308px] pc:flex-row pc:text-base pc:mr-[103px]" />
         </div>
         <div className="flex text-sm1 uppercase  justify-between">
-          <div className="w-1/2">
+          <div className="w-1/2 pc:w-1/3">
             <a
               href=""
               target="_blank"
@@ -65,7 +65,7 @@ export const Footer = () => {
               &#169; ANVIL. All rights reserved.
             </p>
           </div>
-          <div className="pc:flex flex-col gap-2 font-exo hidden pc:mr-12">
+          <div className="pc:flex flex-col gap-2 font-exo hidden pc:mr-12 pc:w-1/3">
             <a
               href="tel:+380955076901"
               className="text-title text-lg13 font-semibold text-center"
@@ -74,19 +74,19 @@ export const Footer = () => {
             </a>
             <a
               href="mailto:anvil_technologi@ukr.net"
-              className="text-title text-lg13 font-semibold text-center"
+              className="text-title text-lg13 font-semibold text-center pc:lowercase"
             >
               anvil_technologi@ukr.net
             </a>
           </div>
-          <div className="w-1/2 text-right ">
-            <div className="mb-4 tab:mb-3 tab:flex tab:gap-2 tab:justify-end pc:mr-[230px]">
+          <div className="w-1/2 text-right pc:w-1/3">
+            <div className="mb-4 tab:mb-3 tab:flex tab:gap-2 tab:justify-end pc:justify-start pc:pl-3">
               <p className="">{t("design")}</p>
               <a target="_blank" rel="noopener noreferrer">
                 {t("stoliarova")}
               </a>
             </div>
-            <div className="tab:flex tab:gap-2 tab:justify-end pc:mr-[220px]">
+            <div className="tab:flex tab:gap-2 tab:justify-end pc:justify-start pc:pl-3">
               <p>{t("development")}</p>
               <a target="_blank" rel="noopener noreferrer">
                 {t("trynkal")}

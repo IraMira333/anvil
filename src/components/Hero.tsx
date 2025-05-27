@@ -77,7 +77,7 @@ export const Hero = () => {
           />
         </div>
         <div className="flex flex-col tab:flex-row gap-10 justify-center tab:justify-between mx-auto max-w-[330px] tab:max-w-full">
-          <ul className="flex flex-col gap-3 font-exo text-title tab:w-[288px] pc:w-[400px]">
+          <ul className="flex flex-col gap-3 font-exo text-title tab:w-[288px] pc:w-[400px] pc:mt-6">
             {descriptionList.map((item, index) => (
               <li
                 key={index}
@@ -91,7 +91,9 @@ export const Hero = () => {
             ))}
           </ul>
           <div className="mx-auto w-[288px] ml-auto mr-0 pc:mt-[-19px]">
-            <p className="hidden tab:block mb-5 text-base12">{t("text")}</p>
+            <p className="hidden tab:block mb-5 text-base12 tab:min-w-[57px]">
+              {t("text")}
+            </p>
             <Button />
           </div>
         </div>

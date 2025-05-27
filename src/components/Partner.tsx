@@ -60,7 +60,7 @@ export const Partner = () => {
           <h1 className="font-exo font-semibold text-3xl pc:text-4xl text-title mt-[54px] tab:mt-0 mb-[46px] tab:mb-0 max-w-[315px] pc:max-w-[418px]">
             {t("weTheBestTitle")}
           </h1>
-          <div className=" relative w-[194px] ml-auto mr-0 mb-[38px] tab:mb-0 tab:w-[194px] text-base12 pc:text-lg12 tab:text-justify">
+          <div className=" relative w-[194px] ml-auto mr-0 mb-[38px] tab:mb-0 tab:w-[194px] text-base12 pc:text-lg12 ">
             <p className="">{t("weTheBestQuote")}</p>
             <Image
               src="/bg/target.svg"
@@ -80,7 +80,7 @@ export const Partner = () => {
               <div className="w-9 h-9 tab:w-10 tab:h-10 pc:w-[56px] pc:h-[56px] mb-6 tab:mb-4 pc:mb-6">
                 {item.icon}
               </div>
-              <h4 className="text-title font-semibold mb-4 pc:text-lg uppercase">
+              <h4 className="text-title font-exo font-semibold mb-4 pc:text-lg uppercase">
                 {item.title}
               </h4>
               <p className="text-base12 pb-4 pc:w-[465px] pc:pb-6">

@@ -44,7 +44,7 @@ export const About = () => {
             <h1 className="font-exo font-semibold text-2xl tab:text-3xl pc:text-4xl text-title mb-4 tab:mb-6 pc:mb-4 tab:w-[480px] pc:w-[550px] tab:text-center mx-auto">
               {t("aboutTitle")}
             </h1>
-            <p className="w-[95%] tab:w-[474px] text-base12 pc:text-lg12 mx-auto pc:w-[550px]">
+            <p className="w-[95%] tab:w-[474px] text-base12 pc:text-lg12 mx-auto pc:w-[520px]">
               {t("aboutDescription")}
             </p>
           </div>
