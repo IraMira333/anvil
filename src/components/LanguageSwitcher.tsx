@@ -40,7 +40,7 @@ export default function LanguageSwitcher() {
                 : "text-title hover:text-accent  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] py-3"
             }
           >
-            {curLocale}
+            {curLocale === "uk" ? "ua" : locale}
           </Link>
         </li>
       ))}
