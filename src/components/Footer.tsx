@@ -72,7 +72,7 @@ export const Footer = () => {
               anvil_technologi@ukr.net
             </a>
           </div>
-          <div className="tab:w-1/2 tab:text-right pc:text-left pc:pl-4 pc:w-1/3 text-center">
+          <div className="tab:w-1/2 tab:text-right pc:text-left pc:pl-7 pc:w-1/3 text-center">
             <a
               href="https://irynastoliarova.framer.website"
               target="_blank"
