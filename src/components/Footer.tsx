@@ -33,7 +33,7 @@ export const Footer = () => {
           }}
         />
       </div>
-      <div className="w-[70%] min-w-[288px] max-w-[540px] tab:max-w-[631px] pc:max-w-[771px] mx-auto -mt-3">
+      <div className="w-[70%] min-w-[288px] max-w-[540px] tab:max-w-[631px] pc:max-w-[771px] mx-auto -mt-3 tab:mt-0">
         <ModelViewerFooter />
       </div>
       <div className="px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">

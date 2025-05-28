@@ -22,7 +22,7 @@ export default function LoopFadeMotionText({ text }: { text: string }) {
           animate={{
             opacity: i === activeIndex ? 0.5 : 1,
             transition: { duration: 0.2 },
-            color: i === activeIndex ? "#63D706" : "",
+            color: i === activeIndex ? "#63D706" : "#F8F8F8",
           }}
         >
           {char}
