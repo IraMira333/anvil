@@ -74,6 +74,7 @@ export const Footer = () => {
           </div>
           <div className="tab:w-1/2 tab:text-right pc:text-left pc:pl-4 pc:w-1/3 text-center">
             <a
+              href="https://irynastoliarova.framer.website"
               target="_blank"
               rel="noopener noreferrer"
               className="mb-4 tab:mb-3 hoverFooter cursor-pointer"
@@ -81,6 +82,7 @@ export const Footer = () => {
               {t("design")}
             </a>
             <a
+              href="https://www.instagram.com/trynkal_iryna_developer?igsh=M3I1eGdoYjM3YTB6&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="hoverFooter cursor-pointer"

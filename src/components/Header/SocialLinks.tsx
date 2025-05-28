@@ -3,9 +3,9 @@ import { useLocale } from "next-intl";
 import ScrambleText from "../shared/ScrambleText";
 
 export const SocialLinks = ({ className }: { className?: string }) => {
-  const FBLink = "https://www.facebook.com/";
+  const whatsapp = "https://wa.me/380955076901";
   const LDLink = "https://www.linkedin.com/";
-  const InstaLink = "https://www.instagram.com/";
+  const telegram = "https://www.instagram.com/";
 
   const locale = useLocale();
 
@@ -16,11 +16,11 @@ export const SocialLinks = ({ className }: { className?: string }) => {
     },
     {
       name: "telegram",
-      href: InstaLink,
+      href: telegram,
     },
     {
       name: "whatsapp",
-      href: FBLink,
+      href: whatsapp,
     },
   ];
   return (
