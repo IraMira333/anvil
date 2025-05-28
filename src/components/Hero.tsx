@@ -79,7 +79,7 @@ export const Hero = () => {
               alt="FPV 7"
               width={610}
               height={207}
-              className="w-[80%] absolute top-5 left-1/2 -translate-x-1/2"
+              className="w-[80%] absolute top-5 pc:top-[-60px] left-1/2 -translate-x-1/2"
             />
             <Image
               src="/bg/heroScene.svg"
