@@ -69,17 +69,17 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex items-center justify-center ">
+        <div className="flex-1 flex items-center justify-center pc:mt-12 ">
           <div
             id="hero-model-anchor"
             className="relative w-full tab:w-[75%] tab:max-w-[550px] pc:max-w-[748px] aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110] z-10"
           >
             <Image
-              src="/bg/ring.png"
-              alt="decor ring"
+              src="/bg/heroScene.svg"
+              alt="drone landing pad"
               width={748}
               height={172}
-              className="absolute bottom-[25%] tab:bottom-[36%] pc:bottom-[23%] left-1/2 -translate-x-1/2"
+              className="absolute bottom-[25%] tab:bottom-[25%] pc:bottom-[23%] left-1/2 -translate-x-1/2"
             />
           </div>
         </div>

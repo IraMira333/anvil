@@ -24,6 +24,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
 img {
@@ -48,4 +49,8 @@ ul {
 }
 .slider-dot--selected {
   @apply bg-title justify-center;
+}
+
+.hoverFooter {
+  @apply hover:font-bold hover:underline transition-all duration-300 ease-out;
 }

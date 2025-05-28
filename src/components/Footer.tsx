@@ -12,14 +12,14 @@ export const Footer = () => {
   const t = useTranslations("HomePage");
 
   return (
-    <footer className="relative overflow-hidden  pb-[183px] tab:pb-[80px] pc:pb-10">
+    <footer className="relative overflow-hidden  pb-[183px] tab:pb-[60px] pc:pb-10">
       <div className="absolute inset-0 z-[-1] flex justify-center">
         <Image
           src="/bg/kolo.svg"
           alt="circle decor"
           width={2000}
           height={2000}
-          className="absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[150vw] max-w-none h-auto"
+          className="absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[180vw] max-w-none h-auto"
           priority
         />
       </div>
@@ -41,56 +41,56 @@ export const Footer = () => {
         <p className="text-sm1 pc:text-base13 text-title font-exo font-semibold leading-[10px] uppercase text-center mb-8 tab:mb-[52px] pc:mb-[65px]">
           {t("slogan")}
         </p>
-        <div className="tab:flex tab:justify-between tab:mb-[104px] pc:mb-[56px]">
+        <div className="tab:flex tab:justify-between mb-12 tab:mb-[104px] pc:mb-[56px]">
           <Menu className="hidden tab:flex tab:flex-col tab:justify-between pc:flex-row pc:w-[366px] pc:justify-between" />
           <CallUsInfo footer />
           <SocialLinks className="mt-6 mb-8 tab:my-0 tab:flex-col tab:justify-between tab:text-sm1 pc:w-[308px] pc:flex-row pc:text-base pc:mr-[103px]" />
         </div>
-        <div className="flex text-sm1 uppercase  justify-between">
-          <div className="w-1/2 pc:w-1/3">
+        <div className="tab:flex text-sm1 uppercase text-center tab:text-left justify-between pc:items-baseline">
+          <div className="w-full tab:w-1/2 pc:w-1/3 mb-7">
             <a
               href=""
               target="_blank"
               rel="noopener noreferrer"
-              className="block mb-4 tab:mb-3 w-[144px] tab:w-full"
+              className="mb-4 tab:mb-3 w-full hoverFooter"
             >
               {t("policy")}
             </a>
-            <p className="w-[144px] tab:w-full ">
-              &#169; ANVIL. {t("privacy")}
-            </p>
+            <p className="w-full ">&#169; ANVIL. {t("privacy")}</p>
           </div>
-          <div className="pc:flex flex-col gap-2 font-exo hidden pc:mr-12 pc:w-1/3">
+          <div className="pc:flex flex-col gap-2 font-exo hidden pc:w-1/3">
             <a
               href="tel:+380955076901"
-              className="text-title text-lg13 font-semibold text-center"
+              className="text-title text-lg13 font-semibold text-center hoverFooter"
             >
               +380 95 507 69 01
             </a>
             <a
               href="mailto:anvil_technologi@ukr.net"
-              className="text-title text-lg13 font-semibold text-center pc:lowercase"
+              className="text-title text-lg13 font-semibold text-center pc:lowercase hoverFooter"
             >
               anvil_technologi@ukr.net
             </a>
           </div>
-          <div className="w-1/2 text-right pc:w-1/3">
-            <div className="mb-4 tab:mb-3 tab:flex tab:gap-2 tab:justify-end pc:justify-start pc:pl-3">
-              <p className="">{t("design")}</p>
-              <a target="_blank" rel="noopener noreferrer">
-                {t("stoliarova")}
-              </a>
-            </div>
-            <div className="tab:flex tab:gap-2 tab:justify-end pc:justify-start pc:pl-3">
-              <p>{t("development")}</p>
-              <a target="_blank" rel="noopener noreferrer">
-                {t("trynkal")}
-              </a>
-            </div>
+          <div className="tab:w-1/2 tab:text-right pc:text-left pc:pl-4 pc:w-1/3 text-center">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-4 tab:mb-3 hoverFooter cursor-pointer"
+            >
+              {t("design")}
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hoverFooter cursor-pointer"
+            >
+              {t("development")}
+            </a>
           </div>
         </div>
       </div>
-      <UpToTopStatic className="w-11 h-11 pc:w-12 pc:h-12 absolute bottom-[109px] tab:bottom-[156px] pc:bottom-10 pc:right-[60px] tab:right-5 tab:left-auto tab:translate-x-0 left-1/2 -translate-x-1/2" />
+      <UpToTopStatic className="w-11 h-11 pc:w-12 pc:h-12 absolute bottom-[109px] tab:bottom-[160px] pc:bottom-10 pc:right-[60px] tab:right-5 tab:left-auto tab:translate-x-0 left-1/2 -translate-x-1/2" />
     </footer>
   );
 };

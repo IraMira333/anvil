@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 
 import { IconArrowsDown } from "./Icons/IconArrowsDown";
 import { Union } from "./Icons/Union";
+import LoopFadeMotionText from "./shared/LoopFadeMotionText";
 import { VacancyForm } from "./VacancyForm";
 
 export const Vacancies = () => {
@@ -113,23 +114,23 @@ export const Vacancies = () => {
           <div className="tab:w-[45%] pc:w-[600px] tab:min-w-[331px] ">
             <div className="relative w-[288px] h-auto mx-auto tab:mx-0 tab:w-[331px] pc:w-[580px] ">
               <h2 className=" font-exo text-title text-[23px] pc:text-4xl12 font-semibold uppercase indent-[40px] tab:indent-[100px] pc:indent-[170px] tab:w-[95%] ">
-                {t("formTitle")}
+                <LoopFadeMotionText text={t("formTitle")} />
               </h2>
               <div className="block w-[11px] h-[18px] tab:w-[6px] pc:w-[10px] tab:h-[14px] pc:h-[25px] border border-r-0 border-accent absolute top-0 tab:top-[6px] pc:top-[10px] left-0" />
               <div className="block w-[11px] h-[18px] tab:w-[6px] pc:w-[10px] tab:h-[14px] pc:h-[25px] border border-l-0 border-accent absolute bottom-0 tab:bottom-[6px] right-0" />
             </div>
-            <div className="hidden tab:flex gap-2 text-sm13 pc:text-lg12 tab:mt-7 pc:mt-[50px] tab:w-[240px] pc:w-[375px]">
+            <div className="hidden tab:flex gap-2 text-sm13 pc:text-lg12 tab:mt-7 pc:mt-[50px] tab:w-[256px] pc:w-[375px]">
               <div>
                 <span className="block w-2 h-2 bg-accent mt-1"></span>
               </div>
-              <p>
+              <p className="">
                 {t.rich("policyAccept", {
                   policy: chunk => (
                     <a
                       href="https://www.ilovemyteam.online/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline font-semibold"
+                      className="underline font-semibold hover:font-bold hover:text-[15px]"
                     >
                       {chunk}
                     </a>
