@@ -1,33 +1,9 @@
 "use client";
-import { Environment, useGLTF } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Suspense, useEffect, useRef } from "react";
-import * as THREE from "three";
+import { Environment } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 
-function Model() {
-  const { scene, animations } = useGLTF("/model/DreoneFPV_TEX.gltf");
-  const group = useRef<THREE.Group>(null);
-  const mixer = useRef<THREE.AnimationMixer | null>(null);
-
-  useEffect(() => {
-    if (animations && animations.length > 0 && group.current) {
-      mixer.current = new THREE.AnimationMixer(group.current);
-      animations.forEach(clip => {
-        mixer.current?.clipAction(clip).play();
-      });
-    }
-  }, [animations]);
-
-  useFrame((state, delta) => {
-    mixer.current?.update(delta);
-  });
-
-  return (
-    <group ref={group} scale={[25, 25, 25]} position={[0, 0, 0]}>
-      <primitive object={scene} />
-    </group>
-  );
-}
+import { ClonedModel } from "./ClonedModel";
 
 export default function ModelViewer() {
   return (
@@ -48,7 +24,7 @@ export default function ModelViewer() {
         <hemisphereLight args={["#eeeeee", "#444444", 1]} />
         <Environment preset="sunset" environmentIntensity={0.15} />
         <Suspense fallback={null}>
-          <Model />
+          <ClonedModel />
         </Suspense>
       </Canvas>
     </div>
