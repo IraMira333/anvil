@@ -31,11 +31,11 @@ function Model() {
 
 export default function ModelViewer() {
   return (
-    <div className="relative w-full aspect-[288/170] z-10">
+    <div className=" w-full aspect-[288/170] z-10">
       <Canvas
         shadows
         camera={{ position: [0, 0, 10], fov: 50 }}
-        className="absolute inset-0 w-full h-full"
+        className="w-full h-full"
       >
         <ambientLight intensity={1.2} />
         <spotLight
@@ -46,7 +46,7 @@ export default function ModelViewer() {
           castShadow
         />
         <hemisphereLight args={["#eeeeee", "#444444", 1]} />
-        <Environment preset="sunset" environmentIntensity={0.1} />
+        <Environment preset="sunset" environmentIntensity={0.15} />
         <Suspense fallback={null}>
           <Model />
         </Suspense>

@@ -39,31 +39,27 @@ export const About = () => {
         {t("about")}
       </h3>
       <div className="px-4 tab:px-[84px] pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <div className="h-screen pt-[78px] tab:pt-[129px] pc:pt-[133px] flex flex-col">
+        <div className="pt-[78px] tab:pt-[129px] pc:pt-[113px] flex flex-col">
           <div className="">
-            <h1 className="font-exo font-semibold text-2xl tab:text-3xl pc:text-4xl text-title mb-4 tab:mb-6 pc:mb-4 tab:w-[480px] pc:w-[550px] tab:text-center mx-auto">
+            <h1
+              id="tab-about"
+              className="min-h-[72px] font-exo font-semibold text-2xl tab:text-3xl pc:text-4xl text-title mb-4 tab:mb-6 pc:mb-4 tab:w-[480px] pc:w-[550px] tab:text-center mx-auto"
+            >
               {t("aboutTitle")}
             </h1>
-            <p className="w-[95%] tab:w-[474px] text-base12 pc:text-lg12 mx-auto pc:w-[520px] tab:text-center">
+            <p className="w-[95%] min-h-[56px] tab:w-[474px] text-base12 pc:text-lg12 mx-auto pc:w-[520px] tab:text-center">
               {t("aboutDescription")}
             </p>
           </div>
 
           <div className="flex-1 flex items-center justify-center ">
-            <div className="relative pb-2 w-full">
-              <Image
-                src="/images/dronFront.png"
-                alt="fpv"
-                width={528}
-                height={322}
-                className="w-[70%] mx-auto max-w-[528px]"
-              />
+            <div className="relative w-full tab:max-w-[550px] pc:max-w-[748px]  aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110] z-10">
               <Image
                 src="/bg/ring.png"
                 alt="decor ring"
                 width={748}
                 height={172}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2"
+                className="absolute bottom-[70px] tab:bottom-[40px] pc:bottom-[60px] left-1/2 -translate-x-1/2"
               />
             </div>
           </div>

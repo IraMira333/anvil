@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl";
 
 import { Button } from "./shared/Button";
 import { ListStyleTypeFourSquare } from "./shared/ListStyleTypeFourSquare";
-import ModelViewer from "./shared/ModelViewer";
 
 export const Hero = () => {
   const t = useTranslations("HomePage");
@@ -15,6 +14,7 @@ export const Hero = () => {
 
   return (
     <section
+      id="hero"
       className="pt-8 pb-[88px] relative bg-blackCustom clip-path-down-cut-mobile
     tab:pt-[56px] pc:pt-[60px] tab:pb-[162px] pc:pb-[110px] tab:clip-path-down-cut-tab "
     >
@@ -39,7 +39,7 @@ export const Hero = () => {
       </div>
       <div className="px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
         <div className="tab:flex tab:justify-between relative">
-          <h1 className="uppercase font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title mb-4 tab:mb-0 tab:w-[400px] pc:w-[600px]">
+          <h1 className="min-h-[112px] tab:min-h-0 uppercase font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title mb-4 tab:mb-0 max-w-[400px] pc:max-w-[600px]">
             {t.rich("title", {
               br: () => <br />,
             })}
@@ -68,15 +68,20 @@ export const Hero = () => {
             <div className="w-1 h-1 bg-accent absolute top-[-2px] left-[-2px]" />
           </div>
         </div>
-        <div className="relative w-full aspect-[288/170] z-10">
-          <ModelViewer />
-          <Image
-            src="/bg/ring.png"
-            alt="decor ring"
-            width={748}
-            height={172}
-            className="absolute bottom-[30%] left-1/2 -translate-x-1/2"
-          />
+
+        <div className="flex-1 flex items-center justify-center ">
+          <div
+            id="hero-model-anchor"
+            className="relative w-full tab:w-[75%] tab:max-w-[550px] pc:max-w-[748px] aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110] z-10"
+          >
+            <Image
+              src="/bg/ring.png"
+              alt="decor ring"
+              width={748}
+              height={172}
+              className="absolute bottom-[25%] tab:bottom-[36%] pc:bottom-[23%] left-1/2 -translate-x-1/2"
+            />
+          </div>
         </div>
         <div className="flex flex-col tab:flex-row gap-10 justify-center tab:justify-between mx-auto max-w-[330px] tab:max-w-full">
           <ul className="flex flex-col gap-3 font-exo text-title tab:w-[288px] pc:w-[400px] pc:mt-6">
