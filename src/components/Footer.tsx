@@ -5,6 +5,7 @@ import { Menu } from "./Header/Menu";
 import { SocialLinks } from "./Header/SocialLinks";
 import { IconLogo } from "./Icons/IconLogo";
 import { CallUsInfo } from "./shared/CallUsInfo";
+import ModelViewerFooter from "./shared/ModelViewerFooter";
 import { UpToTopStatic } from "./shared/UpToTopStatic";
 
 export const Footer = () => {
@@ -32,14 +33,8 @@ export const Footer = () => {
           }}
         />
       </div>
-      <div>
-        <Image
-          src="/images/dronFront.png"
-          alt="dron front"
-          width={671}
-          height={409}
-          className="w-[70%] min-w-[288px] max-w-[540px] tab:max-w-[631px] pc:max-w-[671px] mx-auto -mt-8"
-        />
+      <div className="w-[70%] min-w-[288px] max-w-[540px] tab:max-w-[631px] pc:max-w-[771px] mx-auto -mt-3">
+        <ModelViewerFooter />
       </div>
       <div className="px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
         <IconLogo className="mx-auto w-[200px] tab:w-[246px] pc:w-[305px] h-auto mb-px" />
