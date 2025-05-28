@@ -69,17 +69,24 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex items-center justify-center ">
+        <div className="flex-1 flex items-center justify-center pc:mt-12 ">
           <div
             id="hero-model-anchor"
             className="relative w-full tab:w-[75%] tab:max-w-[550px] pc:max-w-[748px] aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110] z-10"
           >
             <Image
-              src="/bg/ring.png"
-              alt="decor ring"
+              src="/bg/text.svg"
+              alt="FPV 7"
+              width={610}
+              height={207}
+              className="w-[80%] absolute top-5 pc:top-[-60px] left-1/2 -translate-x-1/2"
+            />
+            <Image
+              src="/bg/heroScene.svg"
+              alt="drone landing pad"
               width={748}
               height={172}
-              className="absolute bottom-[25%] tab:bottom-[36%] pc:bottom-[23%] left-1/2 -translate-x-1/2"
+              className="absolute bottom-[25%] tab:bottom-[25%] pc:bottom-[23%] left-1/2 -translate-x-1/2"
             />
           </div>
         </div>
@@ -97,7 +104,7 @@ export const Hero = () => {
               </li>
             ))}
           </ul>
-          <div className="mx-auto w-[288px] pc:ml-auto pc:mr-0 pc:mt-[-19px]">
+          <div className="mx-auto w-[288px] tab:ml-auto tab:mr-0 pc:mt-[-19px]">
             <p className="hidden tab:block mb-5 text-base12 tab:min-w-[57px]">
               {t("text")}
             </p>

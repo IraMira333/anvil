@@ -1,7 +1,13 @@
+import { useLocale } from "next-intl";
+
+import ScrambleText from "../shared/ScrambleText";
+
 export const SocialLinks = ({ className }: { className?: string }) => {
-  const FBLink = "https://www.facebook.com/";
+  const whatsapp = "https://wa.me/380955076901";
   const LDLink = "https://www.linkedin.com/";
-  const InstaLink = "https://www.instagram.com/";
+  const telegram = "https://www.instagram.com/";
+
+  const locale = useLocale();
 
   const socialList = [
     {
@@ -9,12 +15,12 @@ export const SocialLinks = ({ className }: { className?: string }) => {
       href: LDLink,
     },
     {
-      name: "instagram",
-      href: InstaLink,
+      name: "telegram",
+      href: telegram,
     },
     {
-      name: "facebook",
-      href: FBLink,
+      name: "whatsapp",
+      href: whatsapp,
     },
   ];
   return (
@@ -27,7 +33,7 @@ export const SocialLinks = ({ className }: { className?: string }) => {
             rel="noopener noreferrer"
             className=""
           >
-            {content.name}
+            <ScrambleText text={content.name} locale={locale} />
           </a>
         </li>
       ))}

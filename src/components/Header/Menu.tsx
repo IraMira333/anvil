@@ -1,5 +1,7 @@
 "use client";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+
+import ScrambleText from "../shared/ScrambleText";
 
 export const Menu = ({
   className,
@@ -9,6 +11,7 @@ export const Menu = ({
   onClick?: () => void;
 }) => {
   const t = useTranslations("Menu");
+  const locale = useLocale();
 
   const menuList = [
     { name: t("about"), path: "#about" },
@@ -35,7 +38,7 @@ export const Menu = ({
               onClick={() => handleLinkClick(content.path)}
               className={" uppercase text-title tab:text-sm12 pc:text-base"}
             >
-              {content.name}
+              <ScrambleText text={content.name} locale={locale} />
             </button>
           </li>
         );

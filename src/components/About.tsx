@@ -52,28 +52,28 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="flex-1 flex items-center justify-center ">
+          <div className="flex-1 flex items-center justify-center mt-10">
             <div className="relative w-full tab:max-w-[550px] pc:max-w-[748px]  aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110] z-10">
               <Image
-                src="/bg/ring.png"
-                alt="decor ring"
+                src="/bg/aboutScene.svg"
+                alt="drone landing pad"
                 width={748}
                 height={172}
-                className="absolute bottom-[70px] tab:bottom-[40px] pc:bottom-[60px] left-1/2 -translate-x-1/2"
+                className="absolute bottom-[45px] tab:bottom-[40px] pc:bottom-[40px] left-1/2 -translate-x-1/2"
               />
             </div>
           </div>
         </div>
 
         <div className="pb-[106px] tab:pb-[129px] pc:pb-[140px]">
-          <h2 className="text-center mb-6 font-exo text-title text-3xl pc:text-4xl font-semibold">
+          <h2 className="text-center mb-9 font-exo text-title text-3xl pc:text-4xl font-semibold">
             {t("ourValuesTitle")}
           </h2>
-          <ul className="flex flex-col gap-4 tab:grid tab:grid-cols-2 tab:gap-5 pc:gap-6 tab:justify-items-center ">
+          <ul className="flex flex-col gap-4 tab:grid tab:grid-cols-2 tab:gap-5 pc:flex pc:flex-row pc:gap-6 pc:justify-center tab:justify-items-center ">
             {valuesList.map((item, index) => (
               <li
                 key={index}
-                className="mx-auto tab:even:mr-auto tab:even:ml-0 tab:odd:mr-0 tab:odd:ml-auto"
+                className="mx-auto tab:even:mr-auto pc:even:mr-0 tab:even:ml-0 tab:odd:mr-0 tab:odd:ml-auto pc:odd:ml-0"
               >
                 <ValueDiv
                   title={item.title}

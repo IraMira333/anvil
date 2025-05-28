@@ -10,7 +10,7 @@ export default function ModelViewer() {
     <div className=" w-full aspect-[288/170] z-10">
       <Canvas
         shadows
-        camera={{ position: [0, 0, 10], fov: 50 }}
+        camera={{ position: [0, 4, 10], fov: 50 }}
         className="w-full h-full"
       >
         <ambientLight intensity={1.2} />

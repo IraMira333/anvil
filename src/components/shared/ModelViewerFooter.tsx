@@ -32,7 +32,7 @@ import { ClonedModel } from "./ClonedModel";
 
 export default function ModelViewerFooter() {
   return (
-    <div className=" w-full aspect-[208/170] z-10">
+    <div className=" w-full aspect-[208/130] z-10">
       <Canvas
         shadows
         camera={{ position: [0, 7, 10], fov: 50 }}
@@ -47,7 +47,7 @@ export default function ModelViewerFooter() {
           castShadow
         />
         <hemisphereLight args={["#eeeeee", "#444444", 1]} />
-        <Environment preset="sunset" environmentIntensity={0.3} />
+        <Environment preset="sunset" environmentIntensity={0.2} />
         <Suspense fallback={null}>
           <ClonedModel />
         </Suspense>
