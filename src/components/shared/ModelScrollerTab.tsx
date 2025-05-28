@@ -17,33 +17,21 @@ export default function ModelScrollerTab() {
       const startRect = anchorStart.getBoundingClientRect();
       const endRect = anchorEnd.getBoundingClientRect();
 
-      //   const maxTranslate = 900;
-
-      // Якщо модель ще не досягла зони — не рухати
       if (startRect.top > 0) {
         setTranslateY(0);
         return;
       }
 
-      // Якщо модель пішла за межі кінцевого блоку — зафіксувати
       if (endRect.top <= 0) {
         const pos = 0 + endRect.top;
-        console.log("🚀 ~ handleScroll ~ pos:", pos);
 
         setTranslateY(pos);
         return;
       }
-
-      // Обраховуємо прогрес між цими точками
-      //   const totalDistance = anchorEnd.offsetTop - anchorStart.offsetTop;
-      //   const scrollPassed = window.scrollY - anchorStart.offsetTop;
-
-      //   const clamped = Math.max(0, Math.min(scrollPassed / totalDistance, 1));
-      //   setTranslateY(clamped * maxTranslate);
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // initial run
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

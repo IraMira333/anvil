@@ -3,7 +3,7 @@ import { Gallery } from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
 import { Partner } from "@/components/Partner";
 import { Services } from "@/components/Services";
-import ModelScroller from "@/components/shared/ClientOnlyModelController";
+import ModelScroller from "@/components/shared/ModelScroller";
 import ModelScrollerTab from "@/components/shared/ModelScrollerTab";
 import { Stages } from "@/components/Stages";
 import { Team } from "@/components/Team";
