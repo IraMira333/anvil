@@ -39,7 +39,7 @@ export const Hero = () => {
       </div>
       <div className="px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
         <div className="tab:flex tab:justify-between relative">
-          <h1 className="min-h-[112px] tab:min-h-0 uppercase font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title mb-4 tab:mb-0 max-w-[400px] pc:max-w-[600px]">
+          <h1 className="min-h-[112px] tab:min-h-[144px] pc:min-h-0 uppercase font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title mb-4 tab:mb-0 max-w-[400px] tab:max-w-[500px] pc:max-w-[600px]">
             {t.rich("title", {
               br: () => <br />,
             })}
