@@ -130,7 +130,7 @@ export const Vacancies = () => {
                       href="https://www.ilovemyteam.online/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline font-semibold hover:font-bold hover:text-[15px]"
+                      className="underline font-semibold hover:font-bold hover:text-[15px] pc:hover:text-[19px]"
                     >
                       {chunk}
                     </a>
