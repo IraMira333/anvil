@@ -9,7 +9,7 @@ export default function LoopFadeMotionText({ text }: { text: string }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(prev => (prev + 1) % text.length);
-    }, 400);
+    }, 200);
 
     return () => clearInterval(interval);
   }, [text.length]);
