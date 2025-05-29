@@ -8,7 +8,7 @@ import { IconEmpty } from "@/components/Icons/IconEmpty";
 import { IconLogo } from "@/components/Icons/IconLogo";
 
 import { Portal } from "./Portal";
-type AnimationPhase = "enter" | "exit";
+// type AnimationPhase = "enter" | "exit";
 
 interface ModalProps {
   children: ReactNode;
@@ -37,6 +37,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            key={isOpen ? "modal-enter" : "modal-exit"}
             className="fixed inset-0 z-[55] flex items-center justify-center"
             initial="hidden"
             animate="visible"
@@ -49,11 +50,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
                 hidden: { scaleX: 0 },
                 visible: { scaleX: 1 },
               }}
-              transition={({ custom }: { custom: AnimationPhase }) =>
-                custom === "exit"
-                  ? { delay: 2, duration: 3, ease: "easeInOut" }
-                  : { duration: 3, ease: "easeInOut" }
-              }
+              transition={{ duration: 3, ease: "easeInOut" }}
               onClick={onClose}
             />
 
@@ -64,11 +61,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
                 hidden: { scaleX: 0 },
                 visible: { scaleX: 1 },
               }}
-              transition={({ custom }: { custom: AnimationPhase }) =>
-                custom === "exit"
-                  ? { delay: 2, duration: 3, ease: "easeInOut" }
-                  : { duration: 3, ease: "easeInOut" }
-              }
+              transition={{ duration: 3, ease: "easeInOut" }}
               onClick={onClose}
             />
 
@@ -76,14 +69,28 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
             <motion.div
               className="relative z-10 w-screen bg-transparent flex justify-center items-center p-6 overflow-y-auto h-screen"
               variants={{
-                hidden: { opacity: 0, scale: 0.95 },
-                visible: { opacity: 1, scale: 1 },
+                hidden: {
+                  opacity: 0,
+                  scale: 0.95,
+                  transition: {
+                    delay: 0, // без затримки на зникнення
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  },
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  transition: {
+                    delay: 3, // затримка лише на появу
+                    duration: 1,
+                    ease: "easeInOut",
+                  },
+                },
               }}
-              transition={({ custom }: { custom: AnimationPhase }) =>
-                custom === "exit"
-                  ? { duration: 1, ease: "easeIn" }
-                  : { delay: 4, duration: 1, ease: "easeIn" }
-              }
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
               onClick={e => e.stopPropagation()}
             >
               <button
