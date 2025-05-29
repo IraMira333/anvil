@@ -7,7 +7,7 @@ import { ClonedModel } from "./ClonedModel";
 
 export default function ModelViewer() {
   return (
-    <div className=" w-full aspect-[288/170] z-[1]">
+    <div className=" w-full aspect-[288/170] z-[5]">
       <Canvas
         shadows
         camera={{ position: [0, 4, 10], fov: 50 }}
