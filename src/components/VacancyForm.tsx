@@ -1,6 +1,8 @@
 "use client";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
+
+import { selectedLink } from "@/utils/selectedLink";
 
 import { Button } from "./shared/Button";
 
@@ -10,6 +12,8 @@ const emailRegex =
   /^(?!.*\.\.)(?!.*[.-]@)(?!@.*[.-]$)([a-zA-Z0-9._%+\-'"]+@(?=[a-zA-Z0-9.-]{1,63}\.[a-zA-Z]{2,}$)(?![.-])[a-zA-Z0-9.-]+(?<![.-]))$/;
 
 export const VacancyForm = () => {
+  const locale = useLocale();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -147,7 +151,7 @@ export const VacancyForm = () => {
           {t.rich("policyAccept", {
             policy: chunk => (
               <a
-                href="https://www.ilovemyteam.online/"
+                href={selectedLink(locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline font-semibold"

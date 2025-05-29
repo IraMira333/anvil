@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+
+import { selectedLink } from "@/utils/selectedLink";
 
 import { IconArrowsDown } from "./Icons/IconArrowsDown";
 import { Union } from "./Icons/Union";
@@ -8,6 +10,8 @@ import { VacancyForm } from "./VacancyForm";
 
 export const Vacancies = () => {
   const t = useTranslations("HomePage");
+  const locale = useLocale();
+
   const vacanciesList = [
     t("vacancyItem1"),
     t("vacancyItem2"),
@@ -127,7 +131,7 @@ export const Vacancies = () => {
                 {t.rich("policyAccept", {
                   policy: chunk => (
                     <a
-                      href="https://www.ilovemyteam.online/"
+                      href={selectedLink(locale)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline font-semibold hover:font-bold hover:text-[15px] pc:hover:text-[19px]"
