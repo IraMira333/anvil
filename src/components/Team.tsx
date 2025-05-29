@@ -40,7 +40,7 @@ export const Team = () => {
             </h2>
           </div>
           <div className="tab:w-1/2">
-            <p className="font-medium text-sm13 tab:text-base13 pc:text-lg13 text-right tab:text-left tab:mt-auto w-[136px] tab:w-[170px] pc:w-[200px] ml-auto mr-0 tab:mx-0">
+            <p className="font-medium text-sm13 tab:text-base13 pc:text-lg13 text-right tab:text-left tab:mt-auto w-[146px] tab:w-[170px] pc:w-[200px] ml-auto mr-0 tab:mx-0">
               {t("slogan")}
             </p>
           </div>

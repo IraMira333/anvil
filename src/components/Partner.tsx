@@ -6,7 +6,7 @@ import { Icon2 } from "./Icons/Icon2";
 import { Icon3 } from "./Icons/Icon3";
 import { Icon4 } from "./Icons/Icon4";
 import { IconArrows } from "./Icons/IconArrows";
-import { Button } from "./shared/Button";
+import { ConsultationModal } from "./shared/Modal/СonsultationModal";
 
 export const Partner = () => {
   const t = useTranslations("HomePage");
@@ -90,7 +90,7 @@ export const Partner = () => {
           ))}
         </ul>
         <div className="flex justify-center">
-          <Button />
+          <ConsultationModal />
         </div>
 
         <IconArrows className="absolute hidden tab:block bottom-5 left-5 pc:left-[60px]" />

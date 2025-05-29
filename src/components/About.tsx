@@ -53,7 +53,7 @@ export const About = () => {
           </div>
 
           <div className="flex-1 flex items-center justify-center mt-10">
-            <div className="relative w-full tab:max-w-[550px] pc:max-w-[748px]  aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110] z-10">
+            <div className="relative w-full tab:max-w-[550px] pc:max-w-[748px]  aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110]">
               <Image
                 src="/bg/aboutScene.svg"
                 alt="drone landing pad"

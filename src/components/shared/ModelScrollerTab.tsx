@@ -38,7 +38,7 @@ export default function ModelScrollerTab() {
 
   return (
     <div
-      className=" pc:hidden pointer-events-none fixed top-[208px] tab:top-[220px] pc:top-[250px] left-0 w-full z-50"
+      className=" pc:hidden pointer-events-none fixed top-[208px] tab:top-[220px] pc:top-[250px] left-0 w-full z-[5]"
       style={{
         transform: `translateY(${translateY}px)`,
         transition: "transform 0.03s linear",

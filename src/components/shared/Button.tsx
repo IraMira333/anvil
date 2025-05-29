@@ -1,12 +1,19 @@
 import { useTranslations } from "next-intl";
 
-export const Button = ({ joinUs }: { joinUs?: boolean }) => {
+export const Button = ({
+  joinUs,
+  onClick,
+}: {
+  joinUs?: boolean;
+  onClick?: () => void;
+}) => {
   const t = useTranslations("Buttons");
   const text = joinUs ? t("joinUs") : t("callUs");
 
   return (
     <div className="relative w-[288px] h-[56px] group">
       <button
+        onClick={onClick}
         className={`${joinUs ? "text-title bg-title20 border border-title20  group-hover:border-accent/20" : "text-accent bg-radial-green-50 border border-accent/20"} w-[288px] h-[56px] group-hover:text-hoverAccent uppercase  font-bold text-base group-hover:bg-radial-green-100 transition-all duration-300 ease-in-out `}
       >
         {text}
