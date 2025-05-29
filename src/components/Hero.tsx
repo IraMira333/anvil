@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { Button } from "./shared/Button";
 import { ListStyleTypeFourSquare } from "./shared/ListStyleTypeFourSquare";
+import { ConsultationModal } from "./shared/Modal/СonsultationModal";
 
 export const Hero = () => {
   const t = useTranslations("HomePage");
@@ -108,7 +108,7 @@ export const Hero = () => {
             <p className="hidden tab:block mb-5 text-base12 tab:min-w-[57px]">
               {t("text")}
             </p>
-            <Button />
+            <ConsultationModal />
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+
+import { selectedLink } from "@/utils/selectedLink";
 
 import { Menu } from "./Header/Menu";
 import { SocialLinks } from "./Header/SocialLinks";
@@ -10,6 +12,7 @@ import { UpToTopStatic } from "./shared/UpToTopStatic";
 
 export const Footer = () => {
   const t = useTranslations("HomePage");
+  const locale = useLocale();
 
   return (
     <footer className="relative overflow-hidden  pb-[183px] tab:pb-[60px] pc:pb-10">
@@ -49,7 +52,7 @@ export const Footer = () => {
         <div className="tab:flex text-sm1 uppercase text-center tab:text-left justify-between pc:items-baseline">
           <div className="w-full tab:w-1/2 pc:w-1/3 mb-7">
             <a
-              href=""
+              href={selectedLink(locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="mb-4 tab:mb-3 w-full hoverFooter"

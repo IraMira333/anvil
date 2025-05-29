@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 
 import { Union } from "./Icons/Union";
 import { AnimatedCard } from "./shared/AnimatedCard";
-import { Button } from "./shared/Button";
+import { ConsultationModal } from "./shared/Modal/СonsultationModal";
 import { StagesCard } from "./shared/StagesCard";
 
 export const Stages = () => {
@@ -62,7 +62,7 @@ export const Stages = () => {
           ))}
         </ul>
         <div className="flex justify-center">
-          <Button />
+          <ConsultationModal />
         </div>
       </div>
     </section>
