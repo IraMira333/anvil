@@ -50,7 +50,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
                 hidden: { scaleX: 0 },
                 visible: { scaleX: 1 },
               }}
-              transition={{ duration: 3, ease: "easeInOut" }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
               onClick={onClose}
             />
 
@@ -61,7 +61,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
                 hidden: { scaleX: 0 },
                 visible: { scaleX: 1 },
               }}
-              transition={{ duration: 3, ease: "easeInOut" }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
               onClick={onClose}
             />
 
@@ -82,7 +82,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
                   opacity: 1,
                   scale: 1,
                   transition: {
-                    delay: 3, // затримка лише на появу
+                    delay: 1.5, // затримка лише на появу
                     duration: 1,
                     ease: "easeInOut",
                   },
