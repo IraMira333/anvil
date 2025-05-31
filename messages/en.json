@@ -41,16 +41,16 @@
     "specializationItemTitle1": "FPV drone production",
     "specializationItemDescription1": "We design and assemble FPV drones of various types for specific tactical missions.",
     "specList1Item1": "FPV drones with fiber optic cable",
-    "specList1Item2": "FPV drones as repeaters",
+    "specList1Item2": "FPV drones as transmitters",
     "specList1Item3": "FPV bomber drones",
-    "specList1Item4": "FPV reconnaissance drones",
+    "specList1Item4": "FPV surveillance drones",
     "specList1Item5": "FPV drones with TV cameras",
     "specializationItemTitle2": "UAV production",
-    "specializationItemDescription2": "Unmanned aircraft for reconnaissance, strike operations, FPV drone support, and special missions.",
-    "specList2Item1": "Reconnaissance aircraft",
-    "specList2Item2": "Bomber aircraft with guidance",
-    "specList2Item3": "Mothership aircraft for FPV drones and their repeaters",
-    "specList2Item4": "Kamikaze aircraft with guidance",
+    "specializationItemDescription2": "Unmanned airplane drone for reconnaissance, strike operations, FPV drone support, and special missions.",
+    "specList2Item1": "Surveillance airplane drone",
+    "specList2Item2": "Bomber airplane drone with terminal guidance",
+    "specList2Item3": "Parent airplane drone for FPV drones and their transmitters",
+    "specList2Item4": "Kamikaze UAV drones with terminal guidance",
     "specializationItemTitle3": "Component and UAV supply",
     "specializationItemDescription3": "We provide units with high-quality materials for combat needs.",
     "specializationItemTitle4": "Support and maintenance",
@@ -82,6 +82,7 @@
     "formTitle": "Fill out the form and join a like-minded team",
     "formName": "Enter your name*",
     "formEmail": "email*",
+    "formOrganization": "organization",
     "formPhone": "phone",
     "formAboutYou": "Write a brief about yourself*",
     "nullName": "Enter your name",
@@ -94,7 +95,14 @@
     "policy": "Privacy Policy",
     "privacy": "All rights reserved",
     "design": "Design by Iryna Stoliarova",
-    "development": "Development by Iryna Trynkal"
+    "development": "Development by Iryna Trynkal",
+    "successTitle": "Thank you!",
+    "successText": "Your request has been sent. Our manager will contact you shortly.",
+    "errorTitle": "Something went wrong!",
+    "errorText": "Please try again.",
+    "formConsTitle": "Book a consultation",
+    "formConsText": "We will provide the best offer for your project",
+    "pinDoc": "Attach file (PDF/DOC)"
   },
   "Menu": {
     "about": "About us",
@@ -104,7 +112,7 @@
     "callUs": "Contact us"
   },
   "Buttons": {
-    "callUs": "Request a consultation",
+    "callUs": "Book a consultation",
     "joinUs": "Join the team"
   }
 }
