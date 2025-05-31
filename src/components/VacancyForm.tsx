@@ -1,7 +1,9 @@
 "use client";
+import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
+import { FormInModalProps } from "@/types/modalProps";
 import { selectedLink } from "@/utils/selectedLink";
 
 import { Button } from "./shared/Button";
@@ -11,7 +13,7 @@ const nameRegex =
 const emailRegex =
   /^(?!.*\.\.)(?!.*[.-]@)(?!@.*[.-]$)([a-zA-Z0-9._%+\-'"]+@(?=[a-zA-Z0-9.-]{1,63}\.[a-zA-Z]{2,}$)(?![.-])[a-zA-Z0-9.-]+(?<![.-]))$/;
 
-export const VacancyForm = () => {
+export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
   const locale = useLocale();
 
   const [formData, setFormData] = useState({
@@ -59,12 +61,30 @@ export const VacancyForm = () => {
     return valid;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validate()) return;
 
-    // Тут встав логіку надсилання в Google Sheets (через API або webhook)
-    console.log("Submitting: ", formData);
+    const onSendData = async () => {
+      const data = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        comment: formData.message,
+      };
+
+      await axios.post("/api/vacancy", data, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    };
+
+    try {
+      await notificationHandler(onSendData);
+    } catch (error) {
+      console.error("Відправка не вдалася:", error);
+    }
   };
 
   const inputClass =

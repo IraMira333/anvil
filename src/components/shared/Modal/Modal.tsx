@@ -67,7 +67,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
 
             {/* Модальне вікно */}
             <motion.div
-              className="relative z-10 w-screen bg-transparent flex justify-center items-center p-6 overflow-y-auto h-screen"
+              className="relative z-10 w-screen bg-transparent overflow-y-auto h-screen"
               variants={{
                 hidden: {
                   opacity: 0,
@@ -95,16 +95,14 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
             >
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 w-11 h-11 p-1 flex justify-center items-center text-title"
+                className="absolute top-4 tab:top-[46px] pc:top-[60px] right-4 tab:right-12 pc:right-[56px] w-11 h-11 tab:w-12 tab:h-12 p-1 flex justify-center items-center text-title"
                 aria-label="Close modal"
               >
-                <IconEmpty className="w-11 h-11" />
+                <IconEmpty className="w-11 h-11 tab:w-12 tab:h-12" />
                 <IconClose className="absolute" />
               </button>
-              <IconLogo className="absolute top-4 left-4" />
-              <div className="w-[90%] min-w-[288px] h-auto max-w-[600px]">
-                {children}
-              </div>
+              <IconLogo className="absolute top-6 tab:top-[56px] pc:top-[70px] left-4 tab:left-12 pc:left-[60px] w-[72px] tab:w-[92px]" />
+              {children}
             </motion.div>
           </motion.div>
         )}

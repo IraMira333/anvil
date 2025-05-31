@@ -6,7 +6,7 @@ import { selectedLink } from "@/utils/selectedLink";
 import { IconArrowsDown } from "./Icons/IconArrowsDown";
 import { Union } from "./Icons/Union";
 import LoopFadeMotionText from "./shared/LoopFadeMotionText";
-import { VacancyForm } from "./VacancyForm";
+import { VacancyModalWrapper } from "./VacancyModalWrapper";
 
 export const Vacancies = () => {
   const t = useTranslations("HomePage");
@@ -144,7 +144,7 @@ export const Vacancies = () => {
             </div>
           </div>
           <div className="tab:w-[51%]">
-            <VacancyForm />
+            <VacancyModalWrapper />
           </div>
         </div>
         <div className="absolute border-b border-l border-corner tab:w-5 tab:h-5 pc:w-9 pc:h-9  tab:bottom-0 tab:left-5 pc:bottom-0 pc:left-[60px]" />

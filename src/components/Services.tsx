@@ -22,7 +22,7 @@ export const Services = () => {
       title: t("specializationItemTitle2"),
       text: t("specializationItemDescription2"),
       list: [
-        t("specList1Item1"),
+        t("specList2Item1"),
         t("specList2Item2"),
         t("specList2Item3"),
         t("specList2Item4"),
