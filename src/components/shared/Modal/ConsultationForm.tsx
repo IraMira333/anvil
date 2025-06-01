@@ -52,7 +52,7 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = t("nullMessage");
+      newErrors.message = t("nullMessageProject");
       valid = false;
     } else if (formData.message.length > 300 || formData.message.length < 20) {
       newErrors.message = t("errorMessage");
@@ -202,7 +202,7 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
           <label htmlFor="message"></label>
           <textarea
             id="message"
-            placeholder={t("formAboutYou")}
+            placeholder={t("formAboutProject")}
             maxLength={300}
             value={formData.message}
             onChange={e =>
