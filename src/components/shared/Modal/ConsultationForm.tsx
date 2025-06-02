@@ -3,6 +3,8 @@ import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
+import { IconEmpty } from "@/components/Icons/IconEmpty";
+import { IconPaperclip } from "@/components/Icons/IconPaperclip";
 import { FormInModalProps } from "@/types/modalProps";
 import { selectedLink } from "@/utils/selectedLink";
 
@@ -15,7 +17,8 @@ const emailRegex =
 
 export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
   const locale = useLocale();
-  //   const [fileName, setFileName] = useState<string | null>(null);
+  const [fileName, setFileName] = useState<string | null>(null);
+  const [status, setStatus] = useState<string>("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -23,6 +26,7 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
     email: "",
     phone: "",
     message: "",
+    fileUrl: "",
   });
 
   const [errors, setErrors] = useState({
@@ -62,12 +66,38 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
     setErrors(newErrors);
     return valid;
   };
+  const uploadFileAndGetUrl = async (file: File): Promise<string | null> => {
+    const formData = new FormData();
+
+    formData.append("file", file);
+
+    setStatus("Завантаження...");
+
+    try {
+      const res = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (data.success && data.viewLink) {
+        setStatus("Файл завантажено");
+        return data.viewLink;
+      } else {
+        setStatus("Помилка під час завантаження");
+        console.error("Помилка при завантаженні файлу");
+        return null;
+      }
+    } catch (err) {
+      console.error("Помилка завантаження:", err);
+      return null;
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validate()) return;
-    const fileInput = document.getElementById("file") as HTMLInputElement;
-    const file = fileInput?.files?.[0];
 
     const onSendData = async () => {
       const data = {
@@ -76,34 +106,20 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
         email: formData.email,
         phone: formData.phone,
         comment: formData.message,
+        fileUrl: formData.fileUrl,
       };
       await axios.post("/api/consultation", data, {
         headers: { "Content-Type": "application/json" },
       });
 
-      if (file) {
-        const formDataObj = new FormData();
-        formDataObj.append("file", file);
-        formDataObj.append("filename", file.name);
-        formDataObj.append("mimeType", file.type);
-
-        await axios.post(
-          "https://script.google.com/macros/s/ВАШ_ID/exec",
-          formDataObj,
-          {
-            headers: { "Content-Type": "multipart/form-data" },
-          }
-        );
-      }
       setFormData({
         name: "",
         organization: "",
         email: "",
         phone: "",
         message: "",
+        fileUrl: "",
       });
-      //   fileInput.value = "";
-      //   setFileName(null);
     };
 
     try {
@@ -218,18 +234,28 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
             </p>
           )}
         </div>
-        {/* <div className=" flex gap-5 items-center">
+        <div className=" flex gap-5 items-center">
           <input
             type="file"
             id="file"
             accept=".pdf,.doc,.docx"
             className="hidden"
-            onChange={e => {
+            onChange={async e => {
               const selectedFile = e.target.files?.[0];
               if (selectedFile) {
                 setFileName(selectedFile.name);
+                setStatus("Завантаження...");
+                const uploadedUrl = await uploadFileAndGetUrl(selectedFile);
+
+                if (uploadedUrl) {
+                  setFormData(prev => ({ ...prev, fileUrl: uploadedUrl }));
+                  setStatus("Файл завантажено");
+                } else {
+                  setStatus("Помилка завантаження файлу");
+                }
               } else {
                 setFileName(null);
+                setFormData(prev => ({ ...prev, fileUrl: "" }));
               }
             }}
           />
@@ -242,10 +268,13 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
             <IconPaperclip className="absolute" />
           </label>
 
-          <p className="font-exo text-sm1 uppercase font-semibold">
-            {fileName ? fileName : t("pinDoc")}
-          </p>
-        </div> */}
+          <div>
+            <p className="font-exo text-sm1 uppercase font-semibold">
+              {fileName ? fileName : t("pinDoc")}
+            </p>
+            {status && <p className="text-accent">{status}</p>}
+          </div>
+        </div>
         <div className="tab:flex tab:gap-5 tab:mt-[45px]">
           <div className="flex gap-2 text-sm13 mb-10 tab:mb-0 tab:w-1/2">
             <div>
@@ -268,7 +297,7 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
           </div>
 
           <div className="flex justify-center tab:justify-end tab:w-1/2">
-            <Button />
+            <Button disabled={status === "Завантаження..." ? true : false} />
           </div>
         </div>
       </form>
