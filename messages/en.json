@@ -104,7 +104,8 @@
     "errorText": "Please try again.",
     "formConsTitle": "Book a consultation",
     "formConsText": "We will provide the best offer for your project",
-    "pinDoc": "Attach file (PDF/DOC)"
+    "pinDoc": "Attach file (PDF/DOC)",
+    "notFound": "404 Page not found"
   },
   "Menu": {
     "about": "About us",
@@ -115,6 +116,7 @@
   },
   "Buttons": {
     "callUs": "Book a consultation",
-    "joinUs": "Join the team"
+    "joinUs": "Join the team",
+    "goHome": "return to home page"
   }
 }
