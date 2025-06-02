@@ -8,7 +8,8 @@ const SPREADSHEET_ID =
 const RANGE = "Аркуш1!A2:G2";
 
 export async function POST(request: NextRequest) {
-  const { name, organization, email, phone, comment } = await request.json();
+  const { name, organization, email, phone, comment, fileUrl } =
+    await request.json();
   const date = new Date().toLocaleString();
 
   if (request.method === "POST") {
@@ -19,6 +20,7 @@ export async function POST(request: NextRequest) {
         email,
         phone,
         comment,
+        fileUrl,
         date,
       ]);
 

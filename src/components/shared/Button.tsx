@@ -1,10 +1,12 @@
 import { useTranslations } from "next-intl";
 
 export const Button = ({
+  disabled,
   joinUs,
   notFound,
   onClick,
 }: {
+  disabled?: boolean;
   joinUs?: boolean;
   notFound?: boolean;
   onClick?: () => void;
@@ -16,7 +18,8 @@ export const Button = ({
     <div className="relative w-[288px] h-[56px] group bg-blackCustom">
       <button
         onClick={onClick}
-        className={`${joinUs ? "text-title bg-title20 border border-title20  group-hover:border-accent/20" : "text-accent bg-radial-green-50 border border-accent/20"} w-[288px] h-[56px] group-hover:text-hoverAccent uppercase  font-bold text-base group-hover:bg-radial-green-100 transition-all duration-300 ease-in-out `}
+        disabled={disabled}
+        className={`${disabled ? "cursor-none" : "cursor-pointer group-hover:text-hoverAccent group-hover:bg-radial-green-100 "} ${joinUs ? "text-title bg-title20 border border-title20  group-hover:border-accent/20" : "text-accent bg-radial-green-50 border border-accent/20"} w-[288px] h-[56px]  uppercase  font-bold text-base transition-all duration-300 ease-in-out `}
       >
         {notFound ? t("goHome") : text}
       </button>
