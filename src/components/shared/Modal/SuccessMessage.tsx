@@ -16,7 +16,7 @@ export const SuccessMessage = () => {
           priority
         />
       </div>{" "}
-      <div className="min-w-[288px] w-[80%] max-w-[436px] pc:max-w-[485px] mx-auto mt-[40vh] tab:mt-[40vh] text-center">
+      <div className="min-w-[288px] w-[80%] max-w-[436px] pc:max-w-[485px] mx-auto mt-[40vh] tab:mt-[50vh] text-center">
         <h2 className="font-exo font-semibold text-2xl13 tab:text-4xl12 uppercase mb-5">
           {t("successTitle")}
         </h2>
