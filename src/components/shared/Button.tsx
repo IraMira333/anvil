@@ -15,11 +15,11 @@ export const Button = ({
   const text = joinUs ? t("joinUs") : t("callUs");
 
   return (
-    <div className="relative w-[288px] h-[56px] group bg-blackCustom">
+    <div className="relative w-[288px] h-12 tab:h-[56px] group bg-blackCustom">
       <button
         onClick={onClick}
         disabled={disabled}
-        className={`${disabled ? "cursor-none" : "cursor-pointer group-hover:text-hoverAccent group-hover:bg-radial-green-100 "} ${joinUs ? "text-title bg-title20 border border-title20  group-hover:border-accent/20" : "text-accent bg-radial-green-50 border border-accent/20"} w-[288px] h-[56px]  uppercase  font-bold text-base transition-all duration-300 ease-in-out `}
+        className={`${disabled ? "cursor-none" : "cursor-pointer group-hover:text-hoverAccent group-hover:bg-radial-green-100 "} ${joinUs ? "text-title bg-title20 border border-title20  group-hover:border-accent/20" : "text-accent bg-radial-green-50 border border-accent/20"} w-[288px] h-12 tab:h-[56px] uppercase  font-bold text-base transition-all duration-300 ease-in-out `}
       >
         {notFound ? t("goHome") : text}
       </button>

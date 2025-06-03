@@ -130,14 +130,14 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
   };
 
   const inputClass =
-    "mt-6 tab:mt-0 mb-7 tab:mb-4 placeholder:text-sm13 placeholder:pc:text-lg13 pc:text-2xl13 block w-full bg-transparent border-0 pb-6 tab:pb-[10px] pc:pb-7 tab:pt-[15px] pc:pt-[29px] pl-[18px] pr-4 tab:pl-7 pc:pl-[52px] font-exo placeholder:uppercase font-semibold text-title placeholder:text-text group-focus:outline-none focus:ring-0";
+    "mt-6 tab:mt-0 mb-7 tab:mb-4 placeholder:text-sm13 placeholder:pc:text-lg13 pc:text-2xl13 block w-full bg-transparent border-0 pb-4 tab:pb-[10px] pc:pb-7 tab:pt-[15px] pc:pt-[29px] pl-[18px] pr-4 tab:pl-7 pc:pl-[52px] font-exo placeholder:uppercase font-semibold text-title placeholder:text-text group-focus:outline-none focus:ring-0";
 
   return (
     <>
-      <h2 className="font-exo font-semibold uppercase text-2xl13 tab:text-4xl12 mb-5 text-center">
+      <h2 className="font-exo font-semibold uppercase text-2xl13 tab:text-4xl12 mb-4 text-center">
         {t("formConsTitle")}
       </h2>
-      <p className="text-center tab:font-bold text-sm13 tab:text-base13 w-[288px] tab:w-[323px] mx-auto mb-5 tab:mb-10">
+      <p className="text-center tab:font-bold text-sm13 tab:text-base13 w-[288px] tab:w-[323px] mx-auto mb-4 tab:mb-10">
         {t("formConsText")}
       </p>
       <form
@@ -275,7 +275,7 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
             {status && <p className="text-accent">{status}</p>}
           </div>
         </div>
-        <div className="tab:flex tab:gap-5 tab:mt-[45px]">
+        <div className="tab:flex tab:gap-5 mt-4 tab:mt-[45px]">
           <div className="flex gap-2 text-sm13 mb-10 tab:mb-0 tab:w-1/2">
             <div>
               <span className="block w-2 h-2 bg-accent mt-1"></span>
