@@ -41,7 +41,7 @@ export const ConsultationModal = () => {
         {isSuccess ? (
           <SuccessMessage />
         ) : (
-          <div className="w-[90%] min-w-[288px] h-auto max-w-[600px] mx-auto mt-[100px] tab:mt-[138px] pc:mt-[140px] pb-[100px]">
+          <div className="w-[90%] min-w-[288px] h-auto max-w-[600px] mx-auto mt-[120px] tab:mt-[138px] pc:mt-[140px] pb-[100px]">
             <ConsultationForm notificationHandler={notificationHandler} />
           </div>
         )}
