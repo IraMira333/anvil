@@ -85,7 +85,7 @@
     "formOrganization": "organization",
     "formPhone": "phone",
     "formAboutYou": "Write a brief about yourself*",
-    "formAboutProject": "Write a brief about your project*",
+    "formAboutProject": "Write a brief about your project",
     "nullName": "Enter your name",
     "errorName": "Only letters, hyphens, apostrophes, and quotation marks are allowed",
     "nullEmail": "Enter your email",
@@ -102,7 +102,7 @@
     "successText": "Your request has been sent. Our manager will contact you shortly.",
     "errorTitle": "Something went wrong!",
     "errorText": "Please try again.",
-    "formConsTitle": "Book a consultation",
+    "formConsTitle": "Fill out the form",
     "formConsText": "We will provide the best offer for your project",
     "pinDoc": "Attach file (PDF/DOC)",
     "notFound": "404 Page not found"
@@ -115,8 +115,9 @@
     "callUs": "Contact us"
   },
   "Buttons": {
-    "callUs": "Book a consultation",
+    "callUs": "make an order",
     "joinUs": "Join the team",
-    "goHome": "return to home page"
+    "goHome": "return to home page",
+    "submit": "send"
   }
 }
