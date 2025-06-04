@@ -32,11 +32,10 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
   const [errors, setErrors] = useState({
     name: "",
     email: "",
-    message: "",
   });
   const t = useTranslations("HomePage");
   const validate = () => {
-    const newErrors: typeof errors = { name: "", email: "", message: "" };
+    const newErrors: typeof errors = { name: "", email: "" };
     let valid = true;
 
     if (!formData.name.trim()) {
@@ -52,14 +51,6 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
       valid = false;
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = t("errorEmail");
-      valid = false;
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = t("nullMessageProject");
-      valid = false;
-    } else if (formData.message.length > 300 || formData.message.length < 20) {
-      newErrors.message = t("errorMessage");
       valid = false;
     }
 
@@ -227,12 +218,6 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
             className={`${inputClass}`}
           />
           <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
-
-          {errors.message && (
-            <p className="absolute bottom-[-16px] left-0 text-error mt-1">
-              {errors.message}
-            </p>
-          )}
         </div>
         <div className=" flex gap-5 items-center">
           <input
